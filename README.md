@@ -8,7 +8,6 @@ This site is a responsive, minimalist portfolio designed to:
 
 - Display my photo collection in a dynamic grid layout
 - Organize content into general photos and themed series
-- Offer an elegant sidebar with my profile and navigation links
 
 Built with **HTML**, **CSS**, and **JavaScript**, the site dynamically loads photo data from a JSON file, ensuring scalability and ease of updates.
 
