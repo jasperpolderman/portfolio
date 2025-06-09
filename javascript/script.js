@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load images from JSON and append to grid
     const grid = document.querySelector(".grid");
 
-    fetch("json/data.json")
+    fetch('json/data.json')
         .then(response => response.json())
         .then(images => {
             console.log("Images loaded:", images);
