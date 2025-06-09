@@ -1,0 +1,278 @@
+@font-face {
+    font-family: 'SF Pro Text';
+    font-weight: 400;
+    src: url('../assets/fonts/Inter-Regular.woff2') format('woff2'),
+         url('../assets/fonts/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SF Pro Text';
+    font-weight: 300;
+    src: url('../assets/fonts/Inter-Light.woff2') format('woff2'),
+         url('../assets/fonts/Inter-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SF Pro Text';
+    font-weight: 500;
+    src: url('../assets/fonts/Inter-Semibold.woff2') format('woff2'),
+         url('../assets/fonts/Inter-Semibold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SF Pro Text';
+    font-weight: 700;
+    src: url('../assets/fonts/Inter-Bold.woff2') format('woff2'),
+         url('../assets/fonts/Inter-Bold.woff') format('woff');
+}
+
+:root {
+    --bg-color: #f4f6f8;
+    --gap: 0.5rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    block-size: 100svh;
+    margin: 0;
+    font-family: 'SF Pro Text', 'Arial', 'sans-serif';
+    font-weight: 400;
+    color: #181818;
+    background-color: var(--bg-color);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+
+    @media (width > 767px) {
+        grid-template-columns: calc(300px + var(--gap)) 1fr;
+    }
+
+    @media (width > 991px) {
+        grid-template-columns: calc(340px + var(--gap)) 1fr;
+    }
+
+    @media (width > 1599px) {
+        grid-template-columns: calc(380px + var(--gap)) 1fr;
+    }
+
+}
+
+.sidebar {
+    @media (width > 767px) {
+        position: sticky;
+        block-size: 100svh; /* Ensures .copyright can be positioned at the bottom of the page */
+        top: 0; /* Sidebar sticks to viewport once scroll position is reached */
+        padding-inline-end: var(--gap);
+    }
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    block-size: 100%;
+    margin-block-end: var(--gap);
+
+    @media (width > 767px) {
+        margin-block-end: 0;
+    }
+}
+
+.profile-scroll {
+    display: inline-block;
+    position: relative;
+
+    @media (width > 767px) {
+        flex: 1 1 auto; /* Start with natural size, but grow to fill available space, and shrink if necessary. */
+        overflow-y: auto;
+    }
+}
+
+.profile-picture-wrapper {
+    position: relative;
+    inline-size: 100%;
+    block-size: calc((100vw / 3) * 4);
+    overflow: hidden;
+
+    @media (width > 767px) {
+        block-size: 400px;
+    }
+
+    @media (width > 991px) {
+        block-size: 453.33px;
+    }
+
+    @media (width > 1599px) {
+        block-size: 506.66px;
+    }
+}
+
+.profile-picture {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover; /* Fill width & height while maintaining aspect ratio */
+}
+
+.profile-picture-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, black 0%, transparent 33.33%);
+    z-index: 1;
+    pointer-events: none;
+
+    @media (width > 767px) {
+        display: none;
+    }
+}
+
+.profile-content {
+    position: absolute;
+    inline-size: 100%;
+    padding-inline: 26px;
+    bottom: 0;
+    color: var(--bg-color);
+    z-index: 2;
+
+    @media (width > 767px) {
+        position: unset;
+        bottom: unset;
+        padding: 17px 16px;
+        color: inherit;
+        z-index: unset;
+    }
+
+    @media (width > 991px) {
+        padding-inline: 24px;
+    }
+}
+
+.profile-name {
+    margin-block: 6px;
+    line-height: 2.25rem;
+    font-size: 2rem;
+    font-weight: 500;
+
+    @media (width > 767px) {
+        margin-block: 0px 6px;
+    }
+}
+
+.profile-name a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-description {
+    margin-block: 0px;
+}
+
+.nav-links { /* User agent of margin-block is 16px */
+    display: flex;
+    margin-block: 22px 40px;
+    padding: 0;
+    gap: 16px;
+    list-style: none;
+
+    @media (width > 767px) {
+        margin-block-start: 26px;
+    }
+}
+
+.nav-links li {
+    display: inline-block;
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.1s ease;
+}
+
+.nav-links a.active {
+    color: inherit;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: inherit;
+}
+
+.copyright {
+    position: fixed;
+    inset-inline-start: 0;
+    inset-inline-end: calc(var(--gap) * -1);
+    bottom: 0;
+    padding-block: 8px;
+    text-align: center;
+    font-size: 0.8rem;
+    border-block-start: 1px #ddd solid;
+    background-color: var(--bg-color);
+    z-index: 3;
+
+    @media (width > 767px) {
+        position: static;
+        text-align: left;
+    }
+}
+
+.copyright p {
+    padding-inline: 16px;
+
+    @media (width > 991px) {
+        padding-inline: 24px;
+    }
+}
+
+.copyright .rights {
+    @media (width > 767px) {
+        display: none;
+    }
+
+    @media (width > 1599px) {
+        display: inline;
+    }
+}
+
+.portfolio {
+    padding-block-end: 40px; /* Bad practise, might need to change the HTML layout and adjust .copyright for every width! */
+}
+
+.grid {
+    column-count: 1;
+    gap: var(--gap);
+
+    @media (width > 600px) {
+        column-count: 2;
+    }
+
+    @media (width > 767px) {
+        column-count: 1;
+    }
+
+    @media (width > 908px) {
+        column-count: 2;
+    }
+
+    @media (width > 1548px) {
+        column-count: 3;
+    }
+}
+
+.grid-item {
+    display: block;
+    margin-block-end: 0.5rem;
+}
+
+.grid-item img {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+}
