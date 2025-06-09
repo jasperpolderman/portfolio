@@ -22,15 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("../json/data.json")
         .then(response => response.json())
         .then(images => {
+            console.log("Images loaded:", images);
+
             images.forEach(img => {
-            const item = document.createElement("div");
-            item.classList.add("grid-item");
+                console.log("Appending image:", img.src)
 
-            item.innerHTML = `
-                <img src="${img.src}" alt="${img.alt}" loading="lazy">
-            `;
+                const item = document.createElement("div");
+                item.classList.add("grid-item");
 
-            grid.appendChild(item);
-        });
-    })
+                item.innerHTML = `
+                    <img src="${img.src}" alt="${img.alt}" loading="lazy">
+                `;
+
+                grid.appendChild(item);
+            });
+        })
+        .catch(err => console.error("Failed to load JSON:", err));
 });
