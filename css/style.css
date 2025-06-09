@@ -185,7 +185,7 @@ body {
     list-style: none;
 
     @media (width > 767px) {
-        margin-block-start: 26px;
+        margin-block: 26px 0px;
     }
 }
 
