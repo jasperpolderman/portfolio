@@ -280,3 +280,12 @@ body {
     inline-size: 100%;
     block-size: auto;
 }
+
+.series {
+    display: flex;
+    block-size: 100svh;
+    font-size: 3.5rem;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+}
