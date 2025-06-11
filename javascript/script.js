@@ -1,3 +1,7 @@
+/* To-Do List
+- Load all images after lazy-loading images are all downloaded
+*/
+
 document.addEventListener("DOMContentLoaded", function () {
     // Set current year
     const yearSpan = document.getElementById("currentYear");
@@ -5,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         yearSpan.textContent = new Date().getFullYear(); // Returns Gregorian year
     }
 
-    // Load image dimensions and render with inherited color placeholders
+    // Fetch the image dimensions and create placeholders
     fetch('json/data.json')
         .then(response => response.json())
         .then(imageList => {
@@ -14,18 +18,35 @@ document.addEventListener("DOMContentLoaded", function () {
             imageList.forEach(image => {
                 const aspectRatio = (image.height / image.width) * 100;
 
+                // Create a grid-item div with padding to preserve aspect ratio
                 const item = document.createElement("div");
                 item.classList.add("grid-item");
+                item.style.setProperty('--aspect-ratio', `${aspectRatio}%`)
 
-                // Maintain aspect ratio with padding trick
-                item.style.position = 'relative';
-                item.style.width = '100%';
-                item.style.paddingBottom = `${aspectRatio}%`;
-                item.style.backgroundColor = 'lime';
-                item.style.marginBottom = '10px';
-                item.style.overflow = 'hidden';
-
+                // Append placeholder to the grid
                 grid.appendChild(item);
             });
+
+            // Function to append images lazily after placeholders exist
+            const loadImages = () => {
+                const items = document.querySelectorAll(".grid-item");
+                items.forEach((item, i) => {
+                    const image = imageList[i];
+                    const img = document.createElement("img");
+                    img.src = image.src;
+                    img.alt = image.alt || '';
+                    img.loading = 'lazy'; // Use native lazy-loading
+                    img.decoding = 'async'; // Async decoding to improve performance
+
+                    item.appendChild(img);
+                });
+            };
+
+            // Defer image loading until browser is idle or after a short delay
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadImages);
+            } else {
+                setTimeout(loadImages, 200);
+            }
         });
 });
