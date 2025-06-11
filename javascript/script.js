@@ -5,38 +5,27 @@ document.addEventListener("DOMContentLoaded", function () {
         yearSpan.textContent = new Date().getFullYear(); // Returns Gregorian year
     }
 
+    // Load image dimensions and render with inherited color placeholders
     fetch('json/data.json')
         .then(response => response.json())
         .then(imageList => {
             const grid = document.querySelector(".grid");
 
-            // Step 1: Preload all images and get dimensions
-            const preloadPromises = imageList.map(image => {
-                return new Promise(resolve => {
-                    const preloadImg = new Image();
-                    preloadImg.src = image.src;
+            imageList.forEach(image => {
+                const aspectRatio = (image.height / image.width) * 100;
 
-                    preloadImg.onload = function () {
-                        resolve({
-                            ...image,
-                            width: preloadImg.naturalWidth,
-                            height: preloadImg.naturalHeight
-                        });
-                    };
-                });
-            });
+                const item = document.createElement("div");
+                item.classList.add("grid-item");
 
-            // Step 2: After all image are preloaded
-            Promise.all(preloadPromises).then(loadedImages => {
-                loadedImages.forEach(img => {
-                    const item = document.createElement("div");
-                    item.classList.add("grid-item");
+                // Maintain aspect ratio with padding trick
+                item.style.position = 'relative';
+                item.style.width = '100%';
+                item.style.paddingBottom = `${aspectRatio}%`;
+                item.style.backgroundColor = 'lime';
+                item.style.marginBottom = '10px';
+                item.style.overflow = 'hidden';
 
-                    item.innerHTML = `
-                        <img src="${img.src}" alt="${img.alt}" width="${img.width}" height="${img.height}" loading="lazy">
-                    `;
-                    grid.appendChild(item);
-                });
+                grid.appendChild(item);
             });
         });
 });

@@ -12,7 +12,9 @@
       "aperture": "f/6.3",
       "shutter": "1/200s",
       "ISO": "100"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/cambodia-2.jpg",
@@ -27,7 +29,9 @@
       "aperture": "f/8",
       "shutter": "1/160s",
       "ISO": "100"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/cambodia-3.jpg",
@@ -42,7 +46,9 @@
       "aperture": "f/6.3",
       "shutter": "1/800s",
       "ISO": "1000"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/cambodia-4.jpg",
@@ -57,7 +63,9 @@
       "aperture": "f/8",
       "shutter": "1/200s",
       "ISO": "160"
-    }
+    },
+    "width": "1333",
+    "height": "2000"
   },
   {
     "src": "images/cambodia-5.jpg",
@@ -72,7 +80,9 @@
       "aperture": "f/8",
       "shutter": "1/200s",
       "ISO": "320"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/cambodia-6.jpg",
@@ -87,7 +97,9 @@
       "aperture": "f/8",
       "shutter": "1/1250s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/cambodia-7.jpg",
@@ -102,7 +114,9 @@
       "aperture": "f/3.5",
       "shutter": "1/400s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "851"
   },
   {
     "src": "images/cambodia-8.jpg",
@@ -117,7 +131,9 @@
       "aperture": "f/8",
       "shutter": "1/200s",
       "ISO": "500"
-    }
+    },
+    "width": "2000",
+    "height": "851"
   },
   {
     "src": "images/cambodia-9.jpg",
@@ -132,7 +148,9 @@
       "aperture": "f/5.6",
       "shutter": "1/100s",
       "ISO": "1000"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/cambodia-10.jpg",
@@ -147,7 +165,9 @@
       "aperture": "f/8",
       "shutter": "1/125s",
       "ISO": "100"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/japan-1.jpg",
@@ -162,7 +182,9 @@
       "aperture": "f/7.1",
       "shutter": "1/320s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/japan-2.jpg",
@@ -177,7 +199,9 @@
       "aperture": "f/8",
       "shutter": "1/800s",
       "ISO": "100"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/japan-3.jpg",
@@ -192,7 +216,9 @@
       "aperture": "f/8",
       "shutter": "1/800s",
       "ISO": "100"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/japan-4.jpg",
@@ -207,7 +233,9 @@
       "aperture": "f/7.1",
       "shutter": "1/640s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/japan-5.jpg",
@@ -222,7 +250,9 @@
       "aperture": "f/5.6",
       "shutter": "1/40s",
       "ISO": "4000"
-    }
+    },
+    "width": "2000",
+    "height": "1333"
   },
   {
     "src": "images/japan-6.jpg",
@@ -237,7 +267,9 @@
       "aperture": "f/7.1",
       "shutter": "1/60s",
       "ISO": "3200"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/japan-7.jpg",
@@ -252,7 +284,9 @@
       "aperture": "f/7.1",
       "shutter": "1/25s",
       "ISO": "2500"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/japan-8.jpg",
@@ -267,7 +301,9 @@
       "aperture": "f/7.1",
       "shutter": "1/50s",
       "ISO": "2500"
-    }
+    },
+    "width": "1333",
+    "height": "2000"
   },
   {
     "src": "images/japan-9.jpg",
@@ -282,7 +318,9 @@
       "aperture": "f/7.1",
       "shutter": "1/60s",
       "ISO": "800"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/japan-10.jpg",
@@ -297,7 +335,9 @@
       "aperture": "f/5",
       "shutter": "1/250",
       "ISO": "320"
-    }
+    },
+    "width": "1333",
+    "height": "2000"
   },
   {
     "src": "images/japan-11.jpg",
@@ -312,7 +352,9 @@
       "aperture": "f/6.3",
       "shutter": "1/400s",
       "ISO": "4000"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/japan-12.jpg",
@@ -327,7 +369,9 @@
       "aperture": "f/7.1",
       "shutter": "1/60s",
       "ISO": "100"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/japan-13.jpg",
@@ -342,7 +386,9 @@
       "aperture": "f/7.1",
       "shutter": "1/100s",
       "ISO": "400"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/japan-14.jpg",
@@ -357,7 +403,9 @@
       "aperture": "f/8",
       "shutter": "1/80s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1333"
   },
   {
     "src": "images/japan-15.jpg",
@@ -372,7 +420,9 @@
       "aperture": "f/7.1",
       "shutter": "1/100s",
       "ISO": "400"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/japan-16.jpg",
@@ -387,7 +437,9 @@
       "aperture": "f/7.1",
       "shutter": "1/100s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/kinderdijk-1.jpg",
@@ -402,7 +454,9 @@
       "aperture": "f/11",
       "shutter": "1/100s",
       "ISO": "800"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/lapland-1.jpg",
@@ -417,7 +471,9 @@
       "aperture": "f/8",
       "shutter": "1/125s",
       "ISO": "500"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/lapland-2.jpg",
@@ -432,7 +488,9 @@
       "aperture": "f/8",
       "shutter": "1/250s",
       "ISO": "200"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/lapland-3.jpg",
@@ -447,7 +505,9 @@
       "aperture": "f/5.6",
       "shutter": "1/250s",
       "ISO": "200"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/lapland-4.jpg",
@@ -462,7 +522,9 @@
       "aperture": "f/8",
       "shutter": "1/320s",
       "ISO": "320"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/lapland-5.jpg",
@@ -477,7 +539,9 @@
       "aperture": "f/11",
       "shutter": "1/200s",
       "ISO": "200"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/lapland-6.jpg",
@@ -492,7 +556,9 @@
       "aperture": "f/5.6",
       "shutter": "1/50s",
       "ISO": "1000"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/lapland-7.jpg",
@@ -507,7 +573,9 @@
       "aperture": "f/8",
       "shutter": "1/160s",
       "ISO": "160"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/malaysia-1.jpg",
@@ -522,7 +590,9 @@
       "aperture": "f/8",
       "shutter": "1/400s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/malaysia-2.jpg",
@@ -537,7 +607,9 @@
       "aperture": "1/60s",
       "shutter": "f/16",
       "ISO": "800"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/malaysia-3.jpg",
@@ -552,7 +624,9 @@
       "aperture": "f/7.1",
       "shutter": "1/100s",
       "ISO": "200"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/malaysia-4.jpg",
@@ -567,7 +641,9 @@
       "aperture": "f/8",
       "shutter": "1/800s",
       "ISO": "160"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/seceda-1.jpg",
@@ -582,7 +658,9 @@
       "aperture": "f/10",
       "shutter": "1/160s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/seceda-2.jpg",
@@ -597,7 +675,9 @@
       "aperture": "f/11",
       "shutter": "1/100s",
       "ISO": "100"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/thailand-1.jpg",
@@ -612,7 +692,9 @@
       "aperture": "f/8",
       "shutter": "1/100s",
       "ISO": "1600"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/thailand-2.jpg",
@@ -627,7 +709,9 @@
       "aperture": "f/11",
       "shutter": "1/2s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/thailand-3.jpg",
@@ -642,7 +726,9 @@
       "aperture": "f/13",
       "shutter": "1/2s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "851"
   },
   {
     "src": "images/thailand-4.jpg",
@@ -657,7 +743,9 @@
       "aperture": "f/8",
       "shutter": "1/4s",
       "ISO": "125"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/thailand-5.jpg",
@@ -672,7 +760,9 @@
       "aperture": "f/13",
       "shutter": "1s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/thailand-6.jpg",
@@ -687,7 +777,9 @@
       "aperture": "f/8",
       "shutter": "1/50s",
       "ISO": "160"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/thailand-7.jpg",
@@ -702,7 +794,9 @@
       "aperture": "f/5.6",
       "shutter": "1/800s",
       "ISO": "100"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/thailand-8.jpg",
@@ -717,7 +811,9 @@
       "aperture": "f/8",
       "shutter": "1/320s",
       "ISO": "125"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/thailand-9.jpg",
@@ -732,7 +828,9 @@
       "aperture": "f/8",
       "shutter": "1/1000s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/thailand-10.jpg",
@@ -747,7 +845,9 @@
       "aperture": "f/8",
       "shutter": "1/200s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/thailand-11.jpg",
@@ -762,7 +862,9 @@
       "aperture": "f/8",
       "shutter": "1/160s",
       "ISO": "100"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/thailand-12.jpg",
@@ -777,7 +879,9 @@
       "aperture": "f/6.3",
       "shutter": "1/400s",
       "ISO": "6400"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/thailand-13.jpg",
@@ -792,7 +896,9 @@
       "aperture": "f/3.5",
       "shutter": "1/200s",
       "ISO": "400"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/thailand-14.jpg",
@@ -807,7 +913,9 @@
       "aperture": "f/13",
       "shutter": "1/125s",
       "ISO": "200"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/thailand-15.jpg",
@@ -822,7 +930,9 @@
       "aperture": "f/5",
       "shutter": "1/200s",
       "ISO": "400"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/thailand-16.jpg",
@@ -837,7 +947,9 @@
       "aperture": "f/8",
       "shutter": "1/400s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/thailand-17.jpg",
@@ -852,7 +964,9 @@
       "aperture": "f/8",
       "shutter": "1/125s",
       "ISO": "400"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/vietnam-1.jpg",
@@ -867,7 +981,9 @@
       "aperture": "f/8",
       "shutter": "1/100s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "851"
   },
   {
     "src": "images/vietnam-2.jpg",
@@ -882,7 +998,9 @@
       "aperture": "f/6.3",
       "shutter": "1/160s",
       "ISO": "125"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/vietnam-3.jpg",
@@ -897,7 +1015,9 @@
       "aperture": "f/8",
       "shutter": "1/160s",
       "ISO": "200"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/vietnam-4.jpg",
@@ -912,7 +1032,9 @@
       "aperture": "f/4",
       "shutter": "1/160s",
       "ISO": "160"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/vietnam-5.jpg",
@@ -927,7 +1049,9 @@
       "aperture": "f/5.6",
       "shutter": "1/250s",
       "ISO": "100"
-    }
+    },
+    "width": "1600",
+    "height": "2000"
   },
   {
     "src": "images/vietnam-6.jpg",
@@ -942,7 +1066,9 @@
       "aperture": "f/5",
       "shutter": "1/160s",
       "ISO": "2000"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   },
   {
     "src": "images/vietnam-7.jpg",
@@ -957,6 +1083,8 @@
       "aperture": "f/8",
       "shutter": "1/250s",
       "ISO": "100"
-    }
+    },
+    "width": "2000",
+    "height": "1125"
   }
 ]
