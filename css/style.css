@@ -282,8 +282,53 @@ body {
     display: block;
     position: absolute;
     inline-size: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.blur-load::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    animation: pulse 2.5s infinite;
+}
+
+.blur-load.loaded::before {
+    content: none;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+.blur-load {
+    position: absolute;
+    inline-size: 100%;
     block-size: 100%;
     inset: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.blur-load.loaded img{
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+}
+
+.blur-load img {
+    opacity: 0;
+    inline-size: 100%;
+    block-size: 100%;
     object-fit: cover;
 }
 

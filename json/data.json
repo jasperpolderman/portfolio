@@ -1,6 +1,7 @@
 [
   {
-    "src": "images/cambodia-1.jpg",
+    "src": "images/fullsize/cambodia-1.jpg",
+    "placeholder": "images/placeholders/cambodia-small-1.jpg",
     "alt": "Cambodia",
     "title": "Sunset Over Ancient Ruins",
     "location": "Angkor Wat, Cambodia",
@@ -17,7 +18,8 @@
     "height": "2000"
   },
   {
-    "src": "images/cambodia-2.jpg",
+    "src": "images/fullsize/cambodia-2.jpg",
+    "placeholder": "images/placeholders/cambodia-small-2.jpg",
     "alt": "Cambodia",
     "title": "Solar Alignment",
     "location": "Angkor Wat, Cambodia",
@@ -34,7 +36,8 @@
     "height": "2000"
   },
   {
-    "src": "images/cambodia-3.jpg",
+    "src": "images/fullsize/cambodia-3.jpg",
+    "placeholder": "images/placeholders/cambodia-small-3.jpg",
     "alt": "Cambodia",
     "title": "Wise Watcher",
     "location": "Angkor Wat, Cambodia",
@@ -51,7 +54,8 @@
     "height": "2000"
   },
   {
-    "src": "images/cambodia-4.jpg",
+    "src": "images/fullsize/cambodia-4.jpg",
+    "placeholder": "images/placeholders/cambodia-small-4.jpg",
     "alt": "Cambodia",
     "title": "Timeless Gate",
     "location": "Ta Phrom, Cambodia",
@@ -68,7 +72,8 @@
     "height": "2000"
   },
   {
-    "src": "images/cambodia-5.jpg",
+    "src": "images/fullsize/cambodia-5.jpg",
+    "placeholder": "images/placeholders/cambodia-small-5.jpg",
     "alt": "Cambodia",
     "title": "Stone Ascent",
     "location": "Angkor Wat, Cambodia",
@@ -85,7 +90,8 @@
     "height": "2000"
   },
   {
-    "src": "images/cambodia-6.jpg",
+    "src": "images/fullsize/cambodia-6.jpg",
+    "placeholder": "images/placeholders/cambodia-small-6.jpg",
     "alt": "Cambodia",
     "title": "Shadowed Legacy",
     "location": "Angkor Wat, Cambodia",
@@ -102,7 +108,8 @@
     "height": "1125"
   },
   {
-    "src": "images/cambodia-7.jpg",
+    "src": "images/fullsize/cambodia-7.jpg",
+    "placeholder": "images/placeholders/cambodia-small-7.jpg",
     "alt": "Cambodia",
     "title": "Sacred Imprints",
     "location": "Angkor Wat, Cambodia",
@@ -119,7 +126,8 @@
     "height": "851"
   },
   {
-    "src": "images/cambodia-8.jpg",
+    "src": "images/fullsize/cambodia-8.jpg",
+    "placeholder": "images/placeholders/cambodia-small-8.jpg",
     "alt": "Cambodia",
     "title": "Architect's Vision",
     "location": "Angkor Wat, Cambodia",
@@ -136,7 +144,8 @@
     "height": "851"
   },
   {
-    "src": "images/cambodia-9.jpg",
+    "src": "images/fullsize/cambodia-9.jpg",
+    "placeholder": "images/placeholders/cambodia-small-9.jpg",
     "alt": "Cambodia",
     "title": "Historic Passageway",
     "location": "Ta Phrom, Cambodia",
@@ -153,7 +162,8 @@
     "height": "2000"
   },
   {
-    "src": "images/cambodia-10.jpg",
+    "src": "images/fullsize/cambodia-10.jpg",
+    "placeholder": "images/placeholders/cambodia-small-10.jpg",
     "alt": "Cambodia",
     "title": "Ancient Roots",
     "location": "Ta Phrom, Cambodia",
@@ -170,7 +180,8 @@
     "height": "2000"
   },
   {
-    "src": "images/japan-1.jpg",
+    "src": "images/fullsize/japan-1.jpg",
+    "placeholder": "images/placeholders/japan-small-1.jpg",
     "alt": "Japan",
     "title": "Imperial Stillness",
     "location": "Tokyo, Japan",
@@ -187,7 +198,8 @@
     "height": "1125"
   },
   {
-    "src": "images/japan-2.jpg",
+    "src": "images/fullsize/japan-2.jpg",
+    "placeholder": "images/placeholders/japan-small-2.jpg",
     "alt": "Japan",
     "title": "Peak and Poles",
     "location": "Fujiyoshida, Japan",
@@ -204,7 +216,8 @@
     "height": "2000"
   },
   {
-    "src": "images/japan-3.jpg",
+    "src": "images/fullsize/japan-3.jpg",
+    "placeholder": "images/placeholders/japan-small-3.jpg",
     "alt": "Japan",
     "title": "Approaching Station Mt. Fuji",
     "location": "Fujiyoshida, Japan",
@@ -221,7 +234,8 @@
     "height": "2000"
   },
   {
-    "src": "images/japan-4.jpg",
+    "src": "images/fullsize/japan-4.jpg",
+    "placeholder": "images/placeholders/japan-small-4.jpg",
     "alt": "Japan",
     "title": "Echoes of Elevation",
     "location": "Fujikawaguchiko, Japan",
@@ -238,7 +252,8 @@
     "height": "1125"
   },
   {
-    "src": "images/japan-5.jpg",
+    "src": "images/fullsize/japan-5.jpg",
+    "placeholder": "images/placeholders/japan-small-5.jpg",
     "alt": "Japan",
     "title": "Thread of Tradition",
     "location": "Kyoto, Japan",
@@ -255,7 +270,8 @@
     "height": "1333"
   },
   {
-    "src": "images/japan-6.jpg",
+    "src": "images/fullsize/japan-6.jpg",
+    "placeholder": "images/placeholders/japan-small-6.jpg",
     "alt": "Japan",
     "title": "Gates of Glow",
     "location": "Kyoto, Japan",
@@ -272,7 +288,8 @@
     "height": "2000"
   },
   {
-    "src": "images/japan-7.jpg",
+    "src": "images/fullsize/japan-7.jpg",
+    "placeholder": "images/placeholders/japan-small-7.jpg",
     "alt": "Japan",
     "title": "Whispers in the Grove",
     "location": "Kyoto, Japan",
@@ -289,7 +306,8 @@
     "height": "1125"
   },
   {
-    "src": "images/japan-8.jpg",
+    "src": "images/fullsize/japan-8.jpg",
+    "placeholder": "images/placeholders/japan-small-8.jpg",
     "alt": "Japan",
     "title": "Reaching for the Light",
     "location": "Kyoto, Japan",
@@ -306,7 +324,8 @@
     "height": "2000"
   },
   {
-    "src": "images/japan-9.jpg",
+    "src": "images/fullsize/japan-9.jpg",
+    "placeholder": "images/placeholders/japan-small-9.jpg",
     "alt": "Japan",
     "title": "Rise and Reach",
     "location": "Kyoto, Japan",
@@ -323,7 +342,8 @@
     "height": "1125"
   },
   {
-    "src": "images/japan-10.jpg",
+    "src": "images/fullsize/japan-10.jpg",
+    "placeholder": "images/placeholders/japan-small-10.jpg",
     "alt": "Japan",
     "title": "Steps into the Unknown",
     "location": "Nara, Japan",
@@ -340,7 +360,8 @@
     "height": "2000"
   },
   {
-    "src": "images/japan-11.jpg",
+    "src": "images/fullsize/japan-11.jpg",
+    "placeholder": "images/placeholders/japan-small-11.jpg",
     "alt": "Japan",
     "title": "Veiled Watcher",
     "location": "Nara, Japan",
@@ -357,7 +378,8 @@
     "height": "2000"
   },
   {
-    "src": "images/japan-12.jpg",
+    "src": "images/fullsize/japan-12.jpg",
+    "placeholder": "images/placeholders/japan-small-12.jpg",
     "alt": "Japan",
     "title": "Light, Stone & Time",
     "location": "Kyoto, Japan",
@@ -374,7 +396,8 @@
     "height": "2000"
   },
   {
-    "src": "images/japan-13.jpg",
+    "src": "images/fullsize/japan-13.jpg",
+    "placeholder": "images/placeholders/japan-small-13.jpg",
     "alt": "Japan",
     "title": "Steps Through Time",
     "location": "Kyoto, Japan",
@@ -391,7 +414,8 @@
     "height": "2000"
   },
   {
-    "src": "images/japan-14.jpg",
+    "src": "images/fullsize/japan-14.jpg",
+    "placeholder": "images/placeholders/japan-small-14.jpg",
     "alt": "Japan",
     "title": "Daruma Dreams",
     "location": "Osaka, Japan",
@@ -408,7 +432,8 @@
     "height": "1333"
   },
   {
-    "src": "images/japan-15.jpg",
+    "src": "images/fullsize/japan-15.jpg",
+    "placeholder": "images/placeholders/japan-small-15.jpg",
     "alt": "Japan",
     "title": "Guardians of Tradition",
     "location": "Osaka, Japan",
@@ -425,7 +450,8 @@
     "height": "1125"
   },
   {
-    "src": "images/japan-16.jpg",
+    "src": "images/fullsize/japan-16.jpg",
+    "placeholder": "images/placeholders/japan-small-16.jpg",
     "alt": "Japan",
     "title": "Rising Castle",
     "location": "Osaka, Japan",
@@ -442,7 +468,8 @@
     "height": "1125"
   },
   {
-    "src": "images/kinderdijk-1.jpg",
+    "src": "images/fullsize/kinderdijk-1.jpg",
+    "placeholder": "images/placeholders/kinderdijk-small-1.jpg",
     "alt": "Kinderdijk",
     "title": "Timeless Charm",
     "location": "Kinderdijk, The Netherlands",
@@ -459,7 +486,8 @@
     "height": "1125"
   },
   {
-    "src": "images/lapland-1.jpg",
+    "src": "images/fullsize/lapland-1.jpg",
+    "placeholder": "images/placeholders/lapland-small-1.jpg",
     "alt": "Lapland",
     "title": "Man on frozen lake",
     "location": "Salla, Finland",
@@ -476,7 +504,8 @@
     "height": "2000"
   },
   {
-    "src": "images/lapland-2.jpg",
+    "src": "images/fullsize/lapland-2.jpg",
+    "placeholder": "images/placeholders/lapland-small-2.jpg",
     "alt": "Lapland",
     "title": "Reindeer Sleigh Ride",
     "location": "Salla, Finland",
@@ -493,7 +522,8 @@
     "height": "2000"
   },
   {
-    "src": "images/lapland-3.jpg",
+    "src": "images/fullsize/lapland-3.jpg",
+    "placeholder": "images/placeholders/lapland-small-3.jpg",
     "alt": "Lapland",
     "title": "Lapland local",
     "location": "Salla, Finland",
@@ -510,7 +540,8 @@
     "height": "2000"
   },
   {
-    "src": "images/lapland-4.jpg",
+    "src": "images/fullsize/lapland-4.jpg",
+    "placeholder": "images/placeholders/lapland-small-4.jpg",
     "alt": "Lapland",
     "title": "Snow Path",
     "location": "Salla, Finland",
@@ -527,7 +558,8 @@
     "height": "2000"
   },
   {
-    "src": "images/lapland-5.jpg",
+    "src": "images/fullsize/lapland-5.jpg",
+    "placeholder": "images/placeholders/lapland-small-5.jpg",
     "alt": "Lapland",
     "title": "Winter Forest",
     "location": "Salla, Finland",
@@ -544,7 +576,8 @@
     "height": "2000"
   },
   {
-    "src": "images/lapland-6.jpg",
+    "src": "images/fullsize/lapland-6.jpg",
+    "placeholder": "images/placeholders/lapland-small-6.jpg",
     "alt": "Lapland",
     "title": "Sunset in the wilderness",
     "location": "Salla, Finland",
@@ -561,7 +594,8 @@
     "height": "2000"
   },
   {
-    "src": "images/lapland-7.jpg",
+    "src": "images/fullsize/lapland-7.jpg",
+    "placeholder": "images/placeholders/lapland-small-7.jpg",
     "alt": "Lapland",
     "title": "Frozen Majesty",
     "location": "Salla, Finland",
@@ -578,7 +612,8 @@
     "height": "2000"
   },
   {
-    "src": "images/malaysia-1.jpg",
+    "src": "images/fullsize/malaysia-1.jpg",
+    "placeholder": "images/placeholders/malaysia-small-1.jpg",
     "alt": "Malaysia",
     "title": "Ocean's Guide",
     "location": "Langkawi, Malaysia",
@@ -595,7 +630,8 @@
     "height": "1125"
   },
   {
-    "src": "images/malaysia-2.jpg",
+    "src": "images/fullsize/malaysia-2.jpg",
+    "placeholder": "images/placeholders/malaysia-small-2.jpg",
     "alt": "Malaysia",
     "title": "Floating Mosque",
     "location": "Malacca, Malaysia",
@@ -612,7 +648,8 @@
     "height": "1125"
   },
   {
-    "src": "images/malaysia-3.jpg",
+    "src": "images/fullsize/malaysia-3.jpg",
+    "placeholder": "images/placeholders/malaysia-small-3.jpg",
     "alt": "Malaysia",
     "title": "Geometric Ascent",
     "location": "Kuala Lumpur, Malaysia",
@@ -629,7 +666,8 @@
     "height": "2000"
   },
   {
-    "src": "images/malaysia-4.jpg",
+    "src": "images/fullsize/malaysia-4.jpg",
+    "placeholder": "images/placeholders/malaysia-small-4.jpg",
     "alt": "Malaysia",
     "title": "Green Tea",
     "location": "Cameron Highlands, Malaysia",
@@ -646,7 +684,8 @@
     "height": "1125"
   },
   {
-    "src": "images/seceda-1.jpg",
+    "src": "images/fullsize/seceda-1.jpg",
+    "placeholder": "images/placeholders/seceda-small-1.jpg",
     "alt": "Seceda",
     "title": "Seceda Peak",
     "location": "Dolomites, Italy",
@@ -663,7 +702,8 @@
     "height": "1125"
   },
   {
-    "src": "images/seceda-2.jpg",
+    "src": "images/fullsize/seceda-2.jpg",
+    "placeholder": "images/placeholders/seceda-small-2.jpg",
     "alt": "Seceda",
     "title": "Seceda Ridge",
     "location": "Dolomites, Italy",
@@ -680,7 +720,8 @@
     "height": "2000"
   },
   {
-    "src": "images/thailand-1.jpg",
+    "src": "images/fullsize/thailand-1.jpg",
+    "placeholder": "images/placeholders/thailand-small-1.jpg",
     "alt": "Thailand",
     "title": "Market Maze",
     "location": "Bangkok, Thailand",
@@ -697,7 +738,8 @@
     "height": "2000"
   },
   {
-    "src": "images/thailand-2.jpg",
+    "src": "images/fullsize/thailand-2.jpg",
+    "placeholder": "images/placeholders/thailand-small-2.jpg",
     "alt": "Thailand",
     "title": "Hidden Stream",
     "location": "Erawan National Park, Thailand",
@@ -714,7 +756,8 @@
     "height": "1125"
   },
   {
-    "src": "images/thailand-3.jpg",
+    "src": "images/fullsize/thailand-3.jpg",
+    "placeholder": "images/placeholders/thailand-small-3.jpg",
     "alt": "Thailand",
     "title": "Cascade Trail",
     "location": "Erawan National Park, Thailand",
@@ -731,7 +774,8 @@
     "height": "851"
   },
   {
-    "src": "images/thailand-4.jpg",
+    "src": "images/fullsize/thailand-4.jpg",
+    "placeholder": "images/placeholders/thailand-small-4.jpg",
     "alt": "Thailand",
     "title": "Forest Flow",
     "location": "Erawan National Park, Thailand",
@@ -748,7 +792,8 @@
     "height": "1125"
   },
   {
-    "src": "images/thailand-5.jpg",
+    "src": "images/fullsize/thailand-5.jpg",
+    "placeholder": "images/placeholders/thailand-small-5.jpg",
     "alt": "Thailand",
     "title": "Serenity Falls",
     "location": "Erawan National Park, Thailand",
@@ -765,7 +810,8 @@
     "height": "1125"
   },
   {
-    "src": "images/thailand-6.jpg",
+    "src": "images/fullsize/thailand-6.jpg",
+    "placeholder": "images/placeholders/thailand-small-6.jpg",
     "alt": "Thailand",
     "title": "Stillness by the Lake",
     "location": "Kanchanaburi, Thailand",
@@ -782,7 +828,8 @@
     "height": "1125"
   },
   {
-    "src": "images/thailand-7.jpg",
+    "src": "images/fullsize/thailand-7.jpg",
+    "placeholder": "images/placeholders/thailand-small-7.jpg",
     "alt": "Thailand",
     "title": "Bridge to History",
     "location": "Ayutthaya, Thailand",
@@ -799,7 +846,8 @@
     "height": "2000"
   },
   {
-    "src": "images/thailand-8.jpg",
+    "src": "images/fullsize/thailand-8.jpg",
+    "placeholder": "images/placeholders/thailand-small-8.jpg",
     "alt": "Thailand",
     "title": "Heritage in Bloom",
     "location": "Ayutthaya, Thailand",
@@ -816,7 +864,8 @@
     "height": "2000"
   },
   {
-    "src": "images/thailand-9.jpg",
+    "src": "images/fullsize/thailand-9.jpg",
+    "placeholder": "images/placeholders/thailand-small-9.jpg",
     "alt": "Thailand",
     "title": "Mystical Twilight Over Forgotten Temples",
     "location": "Ayutthaya, Thailand",
@@ -833,7 +882,8 @@
     "height": "1125"
   },
   {
-    "src": "images/thailand-10.jpg",
+    "src": "images/fullsize/thailand-10.jpg",
+    "placeholder": "images/placeholders/thailand-small-10.jpg",
     "alt": "Thailand",
     "title": "Celebration Street",
     "location": "Sukhothai, Thailand",
@@ -850,7 +900,8 @@
     "height": "1125"
   },
   {
-    "src": "images/thailand-11.jpg",
+    "src": "images/fullsize/thailand-11.jpg",
+    "placeholder": "images/placeholders/thailand-small-11.jpg",
     "alt": "Thailand",
     "title": "Mirror of Time",
     "location": "Sukhothai, Thailand",
@@ -867,7 +918,8 @@
     "height": "2000"
   },
   {
-    "src": "images/thailand-12.jpg",
+    "src": "images/fullsize/thailand-12.jpg",
+    "placeholder": "images/placeholders/thailand-small-12.jpg",
     "alt": "Thailand",
     "title": "Among the Leaves",
     "location": "Khao Sok National Park, Thailand",
@@ -884,7 +936,8 @@
     "height": "2000"
   },
   {
-    "src": "images/thailand-13.jpg",
+    "src": "images/fullsize/thailand-13.jpg",
+    "placeholder": "images/placeholders/thailand-small-13.jpg",
     "alt": "Thailand",
     "title": "Morning Tranquility",
     "location": "Khao Sok National Park, Thailand",
@@ -901,7 +954,8 @@
     "height": "2000"
   },
   {
-    "src": "images/thailand-14.jpg",
+    "src": "images/fullsize/thailand-14.jpg",
+    "placeholder": "images/placeholders/thailand-small-14.jpg",
     "alt": "Thailand",
     "title": "Golden Escape",
     "location": "Ao Nang, Thailand",
@@ -918,7 +972,8 @@
     "height": "1125"
   },
   {
-    "src": "images/thailand-15.jpg",
+    "src": "images/fullsize/thailand-15.jpg",
+    "placeholder": "images/placeholders/thailand-small-15.jpg",
     "alt": "Thailand",
     "title": "Evening Reflections",
     "location": "Ao Nang, Thailand",
@@ -935,7 +990,8 @@
     "height": "1125"
   },
   {
-    "src": "images/thailand-16.jpg",
+    "src": "images/fullsize/thailand-16.jpg",
+    "placeholder": "images/placeholders/thailand-small-16.jpg",
     "alt": "Thailand",
     "title": "Horizon's Calmness",
     "location": "Ao Nang, Thailand",
@@ -952,7 +1008,8 @@
     "height": "1125"
   },
   {
-    "src": "images/thailand-17.jpg",
+    "src": "images/fullsize/thailand-17.jpg",
+    "placeholder": "images/placeholders/thailand-small-17.jpg",
     "alt": "Thailand",
     "title": "Coastal Refuge",
     "location": "Ko Lipe, Thailand",
@@ -969,7 +1026,8 @@
     "height": "2000"
   },
   {
-    "src": "images/vietnam-1.jpg",
+    "src": "images/fullsize/vietnam-1.jpg",
+    "placeholder": "images/placeholders/vietnam-small-1.jpg",
     "alt": "Vietnam",
     "title": "Stillness Afloat",
     "location": "Trang An, Vietnam",
@@ -986,7 +1044,8 @@
     "height": "851"
   },
   {
-    "src": "images/vietnam-2.jpg",
+    "src": "images/fullsize/vietnam-2.jpg",
+    "placeholder": "images/placeholders/vietnam-small-2.jpg",
     "alt": "Vietnam",
     "title": "Cocoa Mosaic",
     "location": "Can Tho, Vietnam",
@@ -1003,7 +1062,8 @@
     "height": "2000"
   },
   {
-    "src": "images/vietnam-3.jpg",
+    "src": "images/fullsize/vietnam-3.jpg",
+    "placeholder": "images/placeholders/vietnam-small-3.jpg",
     "alt": "Vietnam",
     "title": "Early Morning Transit",
     "location": "Ho Chi Minh City, Vietnam",
@@ -1020,7 +1080,8 @@
     "height": "1125"
   },
   {
-    "src": "images/vietnam-4.jpg",
+    "src": "images/fullsize/vietnam-4.jpg",
+    "placeholder": "images/placeholders/vietnam-small-4.jpg",
     "alt": "Vietnam",
     "title": "Market Hustle",
     "location": "Hoi An, Vietnam",
@@ -1037,7 +1098,8 @@
     "height": "2000"
   },
   {
-    "src": "images/vietnam-5.jpg",
+    "src": "images/fullsize/vietnam-5.jpg",
+    "placeholder": "images/placeholders/vietnam-small-5.jpg",
     "alt": "Vietnam",
     "title": "The Old Town Trade",
     "location": "Hoi An, Vietnam",
@@ -1054,7 +1116,8 @@
     "height": "2000"
   },
   {
-    "src": "images/vietnam-6.jpg",
+    "src": "images/fullsize/vietnam-6.jpg",
+    "placeholder": "images/placeholders/vietnam-small-6.jpg",
     "alt": "Vietnam",
     "title": "Lantern Dance",
     "location": "Hoi An, Vietnam",
@@ -1071,7 +1134,8 @@
     "height": "1125"
   },
   {
-    "src": "images/vietnam-7.jpg",
+    "src": "images/fullsize/vietnam-7.jpg",
+    "placeholder": "images/placeholders/vietnam-small-7.jpg",
     "alt": "Vietnam",
     "title": "Tangled Currents",
     "location": "Nha Trang, Vietnam",

@@ -1,7 +1,3 @@
-/* To-Do List
-- Load all images after lazy-loading images are all downloaded
-*/
-
 document.addEventListener("DOMContentLoaded", function () {
     // Set current year
     const yearSpan = document.getElementById("currentYear");
@@ -27,18 +23,43 @@ document.addEventListener("DOMContentLoaded", function () {
                 grid.appendChild(item);
             });
 
-            // Function to append images lazily after placeholders exist
+            // Lazy load actual images into placeholders
             const loadImages = () => {
                 const items = document.querySelectorAll(".grid-item");
                 items.forEach((item, i) => {
                     const image = imageList[i];
+
+                    // Create blur-load container
+                    const blurLoad = document.createElement("div");
+                    blurLoad.classList.add("blur-load");
+
+                    // Set placeholder background image
+                    blurLoad.style.backgroundImage = `url(${image.placeholder})`;
+                    
+                    // Placeholder animation
+                    const blurDivs = document.querySelectorAll(".blur-load");
+                    blurDivs.forEach(div => {
+                        const blurImg = div.querySelector("img");
+
+                        function loaded() {
+                            div.classList.add("loaded");
+                        }
+                        if (blurImg.complete) {
+                            loaded()
+                        } else {
+                            blurImg.addEventListener("load", loaded)
+                        }
+                    });
+
+                    // Create the image element
                     const img = document.createElement("img");
                     img.src = image.src;
                     img.alt = image.alt || '';
                     img.loading = 'lazy'; // Use native lazy-loading
                     img.decoding = 'async'; // Async decoding to improve performance
 
-                    item.appendChild(img);
+                    blurLoad.appendChild(img);
+                    item.appendChild(blurLoad);
                 });
             };
 
