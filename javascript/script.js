@@ -4,8 +4,15 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     try {
         const imageList = await fetchImageList('json/data.json');
+
+        const usePlaceholders = await shouldUsePlaceholders(imageList[0].src);
+
         await createLayout(imageList);
-        await applyPlaceholders(imageList);
+
+        if (usePlaceholders) {
+            await applyPlaceholders(imageList);
+        }
+
         await loadHighResImages(imageList);
     } catch (error) {
         console.error("Error during portfolio setup: ", error);
@@ -27,6 +34,25 @@ async function fetchImageList(url) {
     return await response.json();
 }
 
+// --- Check if we should use placeholders based on image load speed ---
+async function shouldUsePlaceholders(sampleUrl) {
+    const start = performance.now();
+
+    try {
+        await new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve();
+            img.onerror = reject;
+            img.src = sampleUrl + "?cacheBust=" + Date.now(); // Avoid cached result
+        });
+
+        const duration = performance.now() - start;
+        return duration > 100; // Use placeholder only if load takes more than 100ms
+    } catch {
+        return true; // On error, fallback to using placeholders
+    }
+}
+
 // --- Step 1: Create layout based on image aspect ratios ---
 function createLayout(imageList) {
     return new Promise((resolve) => {
@@ -46,7 +72,7 @@ function createLayout(imageList) {
     });
 }
 
-// --- Step 2: apply blurred placeholders as background images ---
+// --- Step 2: Apply blurred placeholders as background images ---
 function applyPlaceholders(imageList) {
     return new Promise((resolve) => {
         const items = document.querySelectorAll(".grid-item");
@@ -65,7 +91,7 @@ function applyPlaceholders(imageList) {
     });
 }
 
-// --- Step 3: load high-resolution images and insert them ---
+// --- Step 3: Load high-resolution images and insert them ---
 function loadHighResImages(imageList) {
     return new Promise((resolve) => {
         const items = document.querySelectorAll(".grid-item");
@@ -73,7 +99,15 @@ function loadHighResImages(imageList) {
         const insertImages = () => {
             items.forEach((item, i) => {
                 const image = imageList[i];
-                const blurLoad = item.querySelector(".blur-load");
+
+                let blurLoad = item.querySelector(".blur-load");
+
+                // If blur-load wrapper is not present, create one
+                if (!blurLoad) {
+                    blurLoad = document.createElement("div");
+                    blurLoad.classList.add("blur-load");
+                    item.appendChild(blurLoad);
+                }
 
                 const img = document.createElement("img");
 
