@@ -246,7 +246,7 @@ body {
 }
 
 .portfolio {
-    padding-block-end: 40px; /* Bad practise, might need to change the HTML layout and adjust .copyright for every width! */
+    padding-block-end: 40px; /* Bad practise, might need to change the HTML layout */
 }
 
 .grid {
@@ -313,12 +313,11 @@ body {
     position: absolute;
     inline-size: 100%;
     block-size: 100%;
-    inset: 0;
     background-size: cover;
     background-position: center;
 }
 
-.blur-load.loaded img{
+.blur-load.loaded img {
     opacity: 1;
     transition: opacity 200ms ease-in-out;
 }

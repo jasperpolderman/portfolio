@@ -1,62 +1,74 @@
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", async () => {
     setCurrentYear();
-    handleStaticImages();
+    handleStaticProfileImage();
 
     try {
-        const imageList = await fetchImageList('json/data.json');
+        const imageList = await loadImageMetadata('json/data.json');
 
-        const usePlaceholders = await shouldUsePlaceholders(imageList[0].src);
+        const shouldUsePlaceholder = await isSlowConnection(imageList[0].src);
 
-        await createLayout(imageList);
+        await renderGridLayout(imageList);
 
-        if (usePlaceholders) {
-            await applyPlaceholders(imageList);
+        if (shouldUsePlaceholder) {
+            await renderBlurPlaceholders(imageList);
         }
 
-        await loadHighResImages(imageList);
+        await loadFullResolutionImages(imageList);
     } catch (error) {
-        console.error("Error during portfolio setup: ", error);
+        console.error("Error during portfolio setup:", error);
     }
 });
 
-// --- Utility to set the current year ---
+/** --- Set footer copyright ---
+ * Inserts current year into #currentYear span
+ */
 function setCurrentYear() {
     const yearSpan = document.getElementById("currentYear");
-
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 }
 
-// --- Fetch image metadata ---
-async function fetchImageList(url) {
+/** --- Load image metadata from JSON file ---
+ * @param {string} url - URL to the JSON file
+ * @returns {Promise<Array>}
+ */
+async function loadImageMetadata(url) {
     const response = await fetch(url);
-    return await response.json();
+    if (!response.ok) throw new Error(`Failed to fetch image data from ${url}`);
+    return response.json();
 }
 
-// --- Check if we should use placeholders based on image load speed ---
-async function shouldUsePlaceholders(sampleUrl) {
-    const start = performance.now();
+/** --- Determine if placeholders are necessary based on connection speed ---
+ * Measures time to load one image
+ * @param {string} imageUrl - High-res image URL
+ * @returns {Promise<boolean>}
+ */
+async function isSlowConnection(imageUrl) {
+    const startTime = performance.now();
 
     try {
         await new Promise((resolve, reject) => {
-            const img = new Image();
-            img.onload = () => resolve();
-            img.onerror = reject;
-            img.src = sampleUrl + "?cacheBust=" + Date.now(); // Avoid cached result
+            const testImage = new Image();
+            testImage.onload = resolve;
+            testImage.onerror = reject;
+            testImage.src = `${imageUrl}?cb=${Date.now()}`; // Avoid caching
         });
 
-        const duration = performance.now() - start;
-        return duration > 100; // Use placeholder only if load takes more than 100ms
+        const loadTime = performance.now() - startTime;
+        return loadTime > 100;
     } catch {
-        return true; // On error, fallback to using placeholders
+        return true; // Default to placeholders on error
     }
 }
 
-// --- Step 1: Create layout based on image aspect ratios ---
-function createLayout(imageList) {
-    return new Promise((resolve) => {
+/** --- Create image grid based on aspect ratios ---
+ * @param {Array} imageList
+ */
+function renderGridLayout(imageList) {
+    return new Promise(resolve => {
         const grid = document.querySelector(".grid");
+        if (!grid) return resolve();
 
         imageList.forEach(image => {
             const aspectRatio = (image.height / image.width) * 100;
@@ -72,65 +84,64 @@ function createLayout(imageList) {
     });
 }
 
-// --- Step 2: Apply blurred placeholders as background images ---
-function applyPlaceholders(imageList) {
-    return new Promise((resolve) => {
-        const items = document.querySelectorAll(".grid-item");
+/** --- Apply blurred low-res placeholder backgrounds ---
+ * @param {Array} imageList
+ */
+function renderBlurPlaceholders(imageList) {
+    return new Promise(resolve => {
+        const gridItems = document.querySelectorAll(".grid-item");
 
-        items.forEach((item, i) => {
-            const image = imageList[i];
+        gridItems.forEach((item, index) => {
+            const image = imageList[index];
+            const placeholder = document.createElement("div");
 
-            const blurLoad = document.createElement("div");
-            blurLoad.classList.add("blur-load");
-            blurLoad.style.backgroundImage = `url(${image.placeholder})`;
+            placeholder.classList.add("blur-load");
+            placeholder.style.backgroundImage = `url(${image.placeholder})`;
 
-            item.appendChild(blurLoad);
+            item.appendChild(placeholder);
         });
 
         resolve();
     });
 }
 
-// --- Step 3: Load high-resolution images and insert them ---
-function loadHighResImages(imageList) {
-    return new Promise((resolve) => {
-        const items = document.querySelectorAll(".grid-item");
+/** --- Load full-resolution images and append to DOM ---
+ * @param {Array} imageList
+ */
+function loadFullResolutionImages(imageList) {
+    return new Promise(resolve => {
+        const gridItems = document.querySelectorAll(".grid-item");
 
         const insertImages = () => {
-            items.forEach((item, i) => {
-                const image = imageList[i];
+            gridItems.forEach((item, index) => {
+                const image = imageList[index];
+                let wrapper = item.querySelector(".blur-load");
 
-                let blurLoad = item.querySelector(".blur-load");
-
-                // If blur-load wrapper is not present, create one
-                if (!blurLoad) {
-                    blurLoad = document.createElement("div");
-                    blurLoad.classList.add("blur-load");
-                    item.appendChild(blurLoad);
+                // If no placeholder was used, add wrapper now
+                if (!wrapper) {
+                    wrapper = document.createElement("div");
+                    wrapper.classList.add("blur-load");
+                    item.appendChild(wrapper);
                 }
 
-                const img = document.createElement("img");
+                const img = createImageElement(image.src, image.alt);
 
                 img.addEventListener("load", () => {
-                    blurLoad.classList.add("loaded");
+                    wrapper.classList.add("loaded");
                 });
 
                 img.addEventListener("error", () => {
-                    console.error(`Image failed to load: ${image.src}`);
+                    console.error(`Failed to load image: ${image.src}`);
                 });
 
-                img.src = image.src;
-                img.alt = image.alt || '';
-                img.loading = 'lazy';
-                img.decoding = 'async';
-
-                blurLoad.appendChild(img);
+                wrapper.appendChild(img);
             });
 
             resolve();
         };
 
-        if ('requestIdleCallback' in window) {
+        // Defer heavy tasks to idle time if possible
+        if ("requestIdleCallback" in window) {
             requestIdleCallback(insertImages);
         } else {
             setTimeout(insertImages, 200);
@@ -138,20 +149,36 @@ function loadHighResImages(imageList) {
     });
 }
 
-// --- Handle static images blur-load effect ---
-function handleStaticImages() {
+/** --- Create a standard image element with best practices ---
+ * @param {string} src - Image source URL
+ * @param {string} alt - Alt text for accessibility
+ * @returns {HTMLImageElement}
+ */
+function createImageElement(src, alt = '') {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = alt;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    return img;
+}
+
+/** --- Handle blur transition for static profile image ---
+ * For example, the profile picture in the sidebar
+ */
+function handleStaticProfileImage() {
     const profileImg = document.querySelector(".profile-picture");
 
-    if (profileImg) {
-        const blurWrapper = profileImg.closest(".blur-load");
+    if (!profileImg) return;
 
-        profileImg.addEventListener("load", () => {
-            blurWrapper?.classList.add("loaded");
-        });
+    const wrapper = profileImg.closest(".blur-load");
 
-        // Fallback if already cached
-        if (profileImg.complete && profileImg.naturalWidth !== 0) {
-            blurWrapper?.classList.add("loaded");
-        }
+    const markLoaded = () => wrapper?.classList.add("loaded");
+
+    profileImg.addEventListener("load", markLoaded);
+
+    // If already loaded from cache
+    if (profileImg.complete && profileImg.naturalWidth !== 0) {
+        markLoaded();
     }
 }
