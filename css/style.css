@@ -282,8 +282,6 @@ body {
     display: block;
     position: absolute;
     inline-size: 100%;
-    object-position: center;
-    object-fit: cover;
 }
 
 .blur-load::before {

@@ -1,73 +1,123 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Set current year
-    const yearSpan = document.getElementById("currentYear");
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear(); // Returns Gregorian year
+document.addEventListener("DOMContentLoaded", async function () {
+    setCurrentYear();
+    handleStaticImages();
+
+    try {
+        const imageList = await fetchImageList('json/data.json');
+        await createLayout(imageList);
+        await applyPlaceholders(imageList);
+        await loadHighResImages(imageList);
+    } catch (error) {
+        console.error("Error during portfolio setup: ", error);
     }
+});
 
-    // Fetch the image dimensions and create placeholders
-    fetch('json/data.json')
-        .then(response => response.json())
-        .then(imageList => {
-            const grid = document.querySelector(".grid");
+// --- Utility to set the current year ---
+function setCurrentYear() {
+    const yearSpan = document.getElementById("currentYear");
 
-            imageList.forEach(image => {
-                const aspectRatio = (image.height / image.width) * 100;
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+}
 
-                // Create a grid-item div with padding to preserve aspect ratio
-                const item = document.createElement("div");
-                item.classList.add("grid-item");
-                item.style.setProperty('--aspect-ratio', `${aspectRatio}%`)
+// --- Fetch image metadata ---
+async function fetchImageList(url) {
+    const response = await fetch(url);
+    return await response.json();
+}
 
-                // Append placeholder to the grid
-                grid.appendChild(item);
+// --- Step 1: Create layout based on image aspect ratios ---
+function createLayout(imageList) {
+    return new Promise((resolve) => {
+        const grid = document.querySelector(".grid");
+
+        imageList.forEach(image => {
+            const aspectRatio = (image.height / image.width) * 100;
+
+            const item = document.createElement("div");
+            item.classList.add("grid-item");
+            item.style.setProperty('--aspect-ratio', `${aspectRatio}%`);
+
+            grid.appendChild(item);
+        });
+
+        resolve();
+    });
+}
+
+// --- Step 2: apply blurred placeholders as background images ---
+function applyPlaceholders(imageList) {
+    return new Promise((resolve) => {
+        const items = document.querySelectorAll(".grid-item");
+
+        items.forEach((item, i) => {
+            const image = imageList[i];
+
+            const blurLoad = document.createElement("div");
+            blurLoad.classList.add("blur-load");
+            blurLoad.style.backgroundImage = `url(${image.placeholder})`;
+
+            item.appendChild(blurLoad);
+        });
+
+        resolve();
+    });
+}
+
+// --- Step 3: load high-resolution images and insert them ---
+function loadHighResImages(imageList) {
+    return new Promise((resolve) => {
+        const items = document.querySelectorAll(".grid-item");
+
+        const insertImages = () => {
+            items.forEach((item, i) => {
+                const image = imageList[i];
+                const blurLoad = item.querySelector(".blur-load");
+
+                const img = document.createElement("img");
+
+                img.addEventListener("load", () => {
+                    blurLoad.classList.add("loaded");
+                });
+
+                img.addEventListener("error", () => {
+                    console.error(`Image failed to load: ${image.src}`);
+                });
+
+                img.src = image.src;
+                img.alt = image.alt || '';
+                img.loading = 'lazy';
+                img.decoding = 'async';
+
+                blurLoad.appendChild(img);
             });
 
-            // Lazy load actual images into placeholders
-            const loadImages = () => {
-                const items = document.querySelectorAll(".grid-item");
-                items.forEach((item, i) => {
-                    const image = imageList[i];
+            resolve();
+        };
 
-                    // Create blur-load container
-                    const blurLoad = document.createElement("div");
-                    blurLoad.classList.add("blur-load");
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(insertImages);
+        } else {
+            setTimeout(insertImages, 200);
+        }
+    });
+}
 
-                    // Set placeholder background image
-                    blurLoad.style.backgroundImage = `url(${image.placeholder})`;
-                    
-                    // Placeholder animation
-                    const blurDivs = document.querySelectorAll(".blur-load");
-                    blurDivs.forEach(div => {
-                        const blurImg = div.querySelector("img");
+// --- Handle static images blur-load effect ---
+function handleStaticImages() {
+    const profileImg = document.querySelector(".profile-picture");
 
-                        function loaded() {
-                            div.classList.add("loaded");
-                        }
-                        if (blurImg.complete) {
-                            loaded()
-                        } else {
-                            blurImg.addEventListener("load", loaded)
-                        }
-                    });
+    if (profileImg) {
+        const blurWrapper = profileImg.closest(".blur-load");
 
-                    // Create the image element
-                    const img = document.createElement("img");
-                    img.src = image.src;
-                    img.alt = image.alt || '';
-                    img.loading = 'lazy'; // Use native lazy-loading
-                    img.decoding = 'async'; // Async decoding to improve performance
-
-                    blurLoad.appendChild(img);
-                    item.appendChild(blurLoad);
-                });
-            };
-
-            // Defer image loading until browser is idle or after a short delay
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(loadImages);
-            } else {
-                setTimeout(loadImages, 200);
-            }
+        profileImg.addEventListener("load", () => {
+            blurWrapper?.classList.add("loaded");
         });
-});
+
+        // Fallback if already cached
+        if (profileImg.complete && profileImg.naturalWidth !== 0) {
+            blurWrapper?.classList.add("loaded");
+        }
+    }
+}
