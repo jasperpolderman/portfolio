@@ -126,12 +126,34 @@ function loadFullResolutionImages(imageList) {
 
                 const img = createImageElement(image.src, image.alt);
 
+                // --- Overlay creation ---
+                const overlay = document.createElement("div");
+                overlay.classList.add("grid-overlay");
+
+                const title = document.createElement("p");
+                title.classList.add("grid-title");
+                title.textContent = "Loading..."; // Set default title
+
+                const date = document.createElement("p");
+                date.classList.add("grid-date");
+                date.textContent = ""; // Set default date
+
+                overlay.appendChild(title);
+                overlay.appendChild(date);
+                wrapper.appendChild(overlay);
+
                 img.addEventListener("load", () => {
                     wrapper.classList.add("loaded");
+
+                    // Update with real content once loaded
+                    title.textContent = image.title || '';
+                    date.textContent = image.date || '';
                 });
 
                 img.addEventListener("error", () => {
                     console.error(`Failed to load image: ${image.src}`);
+                    title.textContent = "Image failed to load";
+                    date.textContent = "";
                 });
 
                 wrapper.appendChild(img);
@@ -140,7 +162,6 @@ function loadFullResolutionImages(imageList) {
             resolve();
         };
 
-        // Defer heavy tasks to idle time if possible
         if ("requestIdleCallback" in window) {
             requestIdleCallback(insertImages);
         } else {
@@ -160,6 +181,7 @@ function createImageElement(src, alt = '') {
     img.alt = alt;
     img.loading = 'lazy';
     img.decoding = 'async';
+
     return img;
 }
 
