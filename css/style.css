@@ -286,23 +286,12 @@ body {
     inline-size: 100%;
 }
 
-.grid-item::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+.hover-gradient {
+    block-size: 100%;
 }
 
-.grid-item:hover {
+.hover-gradient:hover {
     cursor: pointer;
-}
-
-.grid-item:hover::after {
-    opacity: 1;
-    mask-image: linear-gradient(to top, black 50px, transparent 200px);
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 75px, transparent 250px);
-    backdrop-filter: blur(6px);
 }
 
 .blur-load::before {
@@ -358,13 +347,16 @@ body {
     justify-content: flex-end;
     padding-inline: 1rem;
     color: var(--bg-color);
+    mask-image: linear-gradient(to top, black 3.125rem, transparent 15.625rem);
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
     opacity: 0;
     transition: opacity 0.2s ease;
-    z-index: 2;
 }
 
 .grid-overlay:hover {
     opacity: 1;
+    transition: opacity 0.2s ease;
 }
 
 .grid-title {

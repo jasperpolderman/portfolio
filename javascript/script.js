@@ -140,7 +140,14 @@ function loadFullResolutionImages(imageList) {
 
                 overlay.appendChild(title);
                 overlay.appendChild(date);
-                wrapper.appendChild(overlay);
+
+                // --- Hover gradient creation ---
+                const hoverGradient = document.createElement("div");
+                hoverGradient.classList.add("hover-gradient");
+                hoverGradient.appendChild(overlay);
+
+                wrapper.appendChild(img);
+                wrapper.appendChild(hoverGradient);
 
                 img.addEventListener("load", () => {
                     wrapper.classList.add("loaded");
@@ -155,8 +162,6 @@ function loadFullResolutionImages(imageList) {
                     title.textContent = "Image failed to load";
                     date.textContent = "";
                 });
-
-                wrapper.appendChild(img);
             });
 
             resolve();
