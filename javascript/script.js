@@ -115,44 +115,69 @@ function loadFullResolutionImages(imageList) {
         const insertImages = () => {
             gridItems.forEach((item, index) => {
                 const image = imageList[index];
-                let wrapper = item.querySelector(".blur-load");
 
-                // If no placeholder was used, add wrapper now
+                // --- Ensure wrapper (.blur-load) exists ---
+                let wrapper = item.querySelector(".blur-load");
                 if (!wrapper) {
                     wrapper = document.createElement("div");
                     wrapper.classList.add("blur-load");
-                    item.appendChild(wrapper);
                 }
 
+                // --- Create image element ---
                 const img = createImageElement(image.src, image.alt);
 
-                // --- Overlay creation ---
-                const overlay = document.createElement("div");
-                overlay.classList.add("grid-overlay");
-
+                // --- Create title and date elements ---
                 const title = document.createElement("p");
                 title.classList.add("grid-title");
-                title.textContent = "Loading..."; // Set default title
+                title.textContent = "Loading...";
 
                 const date = document.createElement("p");
                 date.classList.add("grid-date");
-                date.textContent = ""; // Set default date
+                date.textContent = "";
 
-                overlay.appendChild(title);
-                overlay.appendChild(date);
+                // --- Create overlay (.grid-overlay) ---
+                const overlay = document.createElement("div");
+                overlay.classList.add("grid-overlay");
 
-                // --- Hover gradient creation ---
-                const hoverGradient = document.createElement("div");
-                hoverGradient.classList.add("hover-gradient");
-                hoverGradient.appendChild(overlay);
+                // --- Create overlay (.content-overlay) ---
+                const content = document.createElement("div");
+                content.classList.add("content-overlay");
 
-                wrapper.appendChild(img);
-                wrapper.appendChild(hoverGradient);
+                // Child of .grid-overlay
+                overlay.appendChild(content);
 
+                // --- Create overlay (.hover-overlay-x) ---
+                const hover1 = document.createElement("div");
+                hover1.classList.add("hover-overlay-1");
+                const hover2 = document.createElement("div");
+                hover2.classList.add("hover-overlay-2");
+                const hover3 = document.createElement("div");
+                hover3.classList.add("hover-overlay-3");
+                const hover4 = document.createElement("div");
+                hover4.classList.add("hover-overlay-4");
+
+                // Child of .content-overlay
+                content.appendChild(hover1);
+                content.appendChild(hover2);
+                content.appendChild(hover3);
+                content.appendChild(hover4);
+
+                // Children of .content-overlay
+                content.appendChild(title);
+                content.appendChild(date);
+
+                // --- Append everything to wrapper in correct order ---
+                wrapper.appendChild(img);       // .blur-load > img
+                wrapper.appendChild(overlay);   // .blur-load > .grid-overlay
+
+                // --- Append wrapper to grid item if newly created ---
+                if (!item.contains(wrapper)) {
+                    item.appendChild(wrapper);  // .grid-item > .blur-load
+                }
+
+                // --- Image load events ---
                 img.addEventListener("load", () => {
                     wrapper.classList.add("loaded");
-
-                    // Update with real content once loaded
                     title.textContent = image.title || '';
                     date.textContent = image.date || '';
                 });
