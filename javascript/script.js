@@ -1,3 +1,6 @@
+// Global state for currently shown image in lightbox
+let currentLightboxIndex = 0;
+
 document.addEventListener("DOMContentLoaded", async () => {
     setCurrentYear();
     handleStaticProfileImage();
@@ -14,19 +17,195 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         await loadFullResolutionImages(imageList);
+
+        await loadLightbox();
+        setLightbox(imageList);
     } catch (error) {
         console.error("Error during portfolio setup:", error);
     }
 });
 
+/** --- Load lightbox HTML fragment ---
+ * Fetches the lightbox markup from a file and inserts it into the DOM
+ * @returns {Promise<void>}
+ * @throws Will throw an error if fetching the lightbox HTML fails
+ */
+async function loadLightbox() {
+    const response = await fetch('assets/lightbox.html');
+    if (!response.ok) throw new Error('Failed to load lightbox HTML');
+    const html = await response.text();
+    document.getElementById('lightbox-container').innerHTML = html;
+}
+
+/** --- Initialize lightbox functionality ---
+ * Sets up event listeners for grid items to open the lightbox and handles lightbox close behavior.
+ * Requires the lightbox HTML to be already present in the DOM.
+ */
+function setLightbox(imageList) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImageId = document.getElementById("lightbox-image");
+    const lightboxImageBackground = document.getElementById("lightbox-image-background");
+    
+    if (!lightbox || !lightboxImageId || !lightboxImageBackground) return // Safety check
+
+    document.querySelectorAll(".grid-item").forEach(item => {
+        item.addEventListener("click", e => {
+            lightbox.classList.add("active")
+            document.body.style.overflow = "hidden";
+
+            const index = item.getAttribute("data-index");
+            if (index === null) return;
+
+            currentLightboxIndex = Number(index);
+            const image = imageList[currentLightboxIndex];
+            if (!image) return;
+
+            const lightboxImage = item.querySelector("img");
+            if (!lightboxImage) return;
+
+            const img = document.createElement("img");
+            img.src = lightboxImage.src;
+
+            while (lightboxImageId.firstChild) {
+                lightboxImageId.removeChild(lightboxImageId.firstChild);
+            }
+            lightboxImageId.appendChild(img);
+            lightboxImageBackground.style.setProperty('--lightbox-bg', `url('/images/placeholders/${image.placeholder.split('/').pop()}')`);
+
+            setExifInfo(image);
+            setCurrentYear();
+        });
+    });
+
+    lightbox.addEventListener("click", e => {
+        if (e.target !== e.currentTarget) return
+        lightbox.classList.remove("active")
+        document.body.style.overflow = "";
+    });
+
+    const closeBtn = document.getElementById("lightbox-close");
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closeLightbox);
+    }
+
+    const nextBtn = document.getElementById("lightbox-next");
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => showNextImage(imageList));
+    }
+
+    const prevBtn = document.getElementById("lightbox-prev");
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => showPreviousImage(imageList));
+    }
+}
+
+/** --- Set EXIF Information ---
+ * Populates DOM elements with EXIF metadata and related image information
+ * @param {Object} image - The image object containing EXIF and metadata
+ * @param {Object} image.exif - The EXIF metadata object
+ * @param {string} [image.title] - The image title
+ * @param {string} [image.exif.camera] - The camera model used
+ * @param {string} [image.exif.lens] - The lens model used
+ * @param {string} [image.exif.focallength] - The focal length
+ * @param {string} [image.exif.aperture] - The aperture value
+ * @param {string} [image.exif.shutter] - The shutter speed
+ * @param {string|number} [image.exif.ISO] - The ISO setting
+ * @param {string} [image.location] - The location where the photo was taken
+ * @param {string} [image.date] - The date the photo was taken
+ * @returns {void}
+ */
+function setExifInfo(image) {
+    const title = document.getElementById("title");
+    const camera = document.getElementById("camera");
+    const lens = document.getElementById("lens");
+    const settings = document.getElementById("settings");
+    const location = document.getElementById("location");
+    const date = document.getElementById("date");
+
+    if (!image || !image.exif) return;
+
+    if (title) title.textContent = image.title || '';
+    if (camera) camera.textContent = image.exif.camera || '';
+    if (lens) lens.textContent = image.exif.lens || '';
+    if (settings) {
+        const parts = [
+            image.exif.focallength,
+            image.exif.aperture,
+            image.exif.shutter,
+            image.exif.ISO ? `ISO ${image.exif.ISO}` : null
+        ].filter(Boolean);
+        settings.innerHTML = parts.map(part => `<span class="setting-part">${part}</span>`).join('<span class="dot"> • </span>');
+    }
+    if (location) location.textContent = image.location || '';
+    if (date) date.textContent = image.date || '';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    if (!lightbox) return;
+    lightbox.classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+function showNextImage(imageList) {
+    if (!Array.isArray(imageList) || imageList.length === 0) return;
+
+    currentLightboxIndex = (currentLightboxIndex + 1) % imageList.length; // Wrap around
+    const image = imageList[currentLightboxIndex];
+
+    const lightboxImageId = document.getElementById("lightbox-image");
+    const lightboxImageBackground = document.getElementById("lightbox-image-background");
+
+    if (!lightboxImageId || !lightboxImageBackground) return;
+
+    // Create and insert new image
+    const img = document.createElement("img");
+    img.src = image.src;
+
+    while (lightboxImageId.firstChild) {
+        lightboxImageId.removeChild(lightboxImageId.firstChild);
+    }
+    lightboxImageId.appendChild(img);
+
+    lightboxImageBackground.style.setProperty('--lightbox-bg', `url('/images/placeholders/${image.placeholder.split('/').pop()}')`);
+
+    setExifInfo(image);
+    setCurrentYear();
+}
+
+function showPreviousImage(imageList) {
+    if (!Array.isArray(imageList) || imageList.length === 0) return;
+
+    // Decrement index and wrap around
+    currentLightboxIndex = (currentLightboxIndex - 1 + imageList.length) % imageList.length;
+    const image = imageList[currentLightboxIndex];
+
+    const lightboxImageId = document.getElementById("lightbox-image");
+    const lightboxImageBackground = document.getElementById("lightbox-image-background");
+
+    if (!lightboxImageId || !lightboxImageBackground) return;
+
+    const img = document.createElement("img");
+    img.src = image.src;
+
+    while (lightboxImageId.firstChild) {
+        lightboxImageId.removeChild(lightboxImageId.firstChild);
+    }
+    lightboxImageId.appendChild(img);
+
+    lightboxImageBackground.style.setProperty('--lightbox-bg', `url('/images/placeholders/${image.placeholder.split('/').pop()}')`);
+
+    setExifInfo(image);
+    setCurrentYear();
+}
+
 /** --- Set footer copyright ---
  * Inserts current year into #currentYear span
  */
 function setCurrentYear() {
-    const yearSpan = document.getElementById("currentYear");
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
+    const spans = document.querySelectorAll("#currentYear");
+    const year = new Date().getFullYear();
+    spans.forEach(span => span.textContent = year);
 }
 
 /** --- Load image metadata from JSON file ---
@@ -70,11 +249,12 @@ function renderGridLayout(imageList) {
         const grid = document.querySelector(".grid");
         if (!grid) return resolve();
 
-        imageList.forEach(image => {
+        imageList.forEach((image, index) => {
             const aspectRatio = (image.height / image.width) * 100;
 
             const item = document.createElement("div");
             item.classList.add("grid-item");
+            item.setAttribute("data-index", index);
             item.style.setProperty('--aspect-ratio', `${aspectRatio}%`);
 
             grid.appendChild(item);
