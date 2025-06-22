@@ -72,9 +72,7 @@ function setLightbox(imageList) {
             lightboxImageId.appendChild(img);
             lightboxImageBackground.style.setProperty('--lightbox-bg', `url('images/placeholders/${image.placeholder.split('/').pop()}')`);
 
-            const origin = window.location.origin;
-            lightboxImageBackground.style.setProperty('--lightbox-bg', `url('${origin}/images/placeholders/${image.placeholder.split('/').pop()}')`);
-
+            lightboxImageBackground.style.setProperty('--lightbox-bg', `url('images/placeholders/${image.placeholder.split('/').pop()}')`);
 
             setExifInfo(image);
             setCurrentYear();
@@ -171,8 +169,7 @@ function showNextImage(imageList) {
     }
     lightboxImageId.appendChild(img);
 
-    const origin = window.location.origin;
-    lightboxImageBackground.style.setProperty('--lightbox-bg', `url('${origin}/images/placeholders/${image.placeholder.split('/').pop()}')`);
+    lightboxImageBackground.style.setProperty('--lightbox-bg', `url('images/placeholders/${image.placeholder.split('/').pop()}')`);
 
     setExifInfo(image);
     setCurrentYear();
