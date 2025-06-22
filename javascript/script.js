@@ -70,8 +70,8 @@ function setLightbox(imageList) {
                 lightboxImageId.removeChild(lightboxImageId.firstChild);
             }
             lightboxImageId.appendChild(img);
-            // lightboxImageBackground.style.setProperty('--lightbox-bg', `url('/images/placeholders/${image.placeholder.split('/').pop()}')`);
-            lightboxImageBackground.style.setProperty('--lightbox-bg', `url(../${image.placeholder})`);
+            lightboxImageBackground.style.setProperty('--lightbox-bg', `url('images/placeholders/${image.placeholder.split('/').pop()}')`);
+            // lightboxImageBackground.style.setProperty('--lightbox-bg', `url(../${image.placeholder})`);
 
             console.log("Source: ", img.src);
             console.log("Placeholder: ", image.placeholder);
