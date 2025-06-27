@@ -30,6 +30,7 @@
     --primary-color: #f4f6f8;
     --secondary-color: #181818;
     --tertiary-color: #888;
+    --border-color: #ddd;
     --gap: 0.5rem;
 }
 
@@ -214,7 +215,7 @@ body {
     padding-block: 0.5rem;
     text-align: center;
     font-size: 0.8rem;
-    border-block-start: 1px #ddd solid;
+    border-block-start: 1px var(--border-color) solid;
     background-color: var(--primary-color);
     z-index: 3;
 
@@ -631,11 +632,101 @@ body {
 }
 
 .series {
-    display: flex;
-    block-size: 100svh;
-    font-size: 3.5rem;
-    font-weight: 700;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    block-size: 100%;
+    margin-inline: 1.5rem;
+    padding-block-end: 1rem;
+}
+
+
+.page-label {
+    display: none;
+    position: relative;
+    inline-size: fit-content;
+    margin-block: 1.5rem;
+    padding: 0.6875rem 1.5rem;
+    font-size: 1.375rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    background-color: rgb(from var(--tertiary-color) r g b / 0.075);
+
+    @media (width > 767px) {
+        display: block;
+    }
+}
+
+.series-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.series-card {
+    display: grid;
+    grid-template-columns: 33% 67%;
+    aspect-ratio: 2 / 1;
+    border: 1px var(--border-color) solid;
+    border-radius: 0.5rem;
+    background-color: rgb(from var(--tertiary-color) r g b / 0.075);
+    /* cursor: pointer; */
+    overflow: hidden;
+}
+
+.series-card-info {
+    block-size: 100%;
+    padding: 1.5rem;
+}
+
+.series-card-info p {
+    margin-block: 0;
+}
+
+.series-card-title {
+    font-size: 1.0625rem;
+    font-weight: 500;
+
+    @media (width > 1067px) {
+        font-size: 1.375rem;
+    }
+
+    @media (width > 1419px) {
+        font-size: 2.125rem;
+    }
+}
+
+.series-card-description {
+    display: none;
+    margin-block-start: 1rem;
+    font-size: 1.0625rem;
+
+    @media (width > 719px) {
+        display: block;
+    }
+
+    @media (width > 767px) {
+        display: none;
+    }
+
+    @media (width > 1067px) {
+        display: block;
+    }
+}
+
+.series-card-photo-count {
+    margin-block-start: 1rem;
+    font-size: 0.875rem;
+    color: var(--tertiary-color);
+}
+
+.series-card-images {
+    column-count: 2;
+}
+
+.series-card-grid-item {
+    margin-block-end: var(--gap);
+    padding-block-end: var(--aspect-ratio);
+    background-color: red;
+}
+
+.series-card-grid-item img {
+    inline-size: 10%;
 }

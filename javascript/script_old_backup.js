@@ -1,27 +1,109 @@
 // Global state for currently shown image in lightbox
 let currentLightboxIndex = 0;
 
+async function getImageDataById(imageIndex) {
+    // Load all json files
+    const [
+        imageTable,
+        exifDataTable,
+        cameraTable,
+        lensTable,
+        seriesTable,
+        visibilityTable
+    ] = await Promise.all([
+        fetch('db_json/images.json').then(res => res.json()),
+        fetch('db_json/exif.json').then(res => res.json()),
+        fetch('db_json/camera.json').then(res => res.json()),
+        fetch('db_json/lens.json').then(res => res.json()),
+        fetch('db_json/series.json').then(res => res.json()),
+        fetch('db_json/visibility.json').then(res => res.json()),
+    ]);
+
+    // Convert lookup tables to maps for fast access
+    const cameraMap = Object.fromEntries(cameraTable.map(c => [c.camera_id, c.camera_name]));
+    const lensMap = Object.fromEntries(lensTable.map(l => [l.lens_id, l.lens_name]));
+    const seriesMap = Object.fromEntries(seriesTable.map(s => [s.series_id, s.series_name]));
+    const visibilityMap = Object.fromEntries(visibilityTable.map(v => [v.image_id, v]));
+    const exifMap = Object.fromEntries(exifDataTable.map(e => [e.image_id, e]));
+
+    // Filter down to a single image
+    const targetImage = imageIndex ? imageTable.filter(img => img.image_id === imageIndex) : images;
+
+    // Map and enrich data
+    const result = targetImage.map(img => {
+        const exif = exifMap[img.image_id] || {};
+        const visibility = visibilityMap[img.image_id] || {};
+
+        let focallengthConverted = null;
+        if (exif.focallength != null) {
+            focallengthConverted = exif.focallength.toString() + "mm";
+            if (img.format_id === 1) { // If image wast taken on APS-C format
+                const crop = (exif.focallength * 1.6).toFixed(1);
+                focallengthConverted += ` (${crop}mm)`
+            }
+        }
+
+        return {
+            image_id: img.image_id,
+            src: img.src,
+            title: img.title,
+            date: img.date,
+            location: img.location,
+            dimensions: {
+                width: img.width,
+                height: img.height
+            },
+            alt: img.alt,
+            thumbnail: img.thumbnail,
+            series_name: seriesMap[img.series_id] || null,
+            exif: {
+                camera: cameraMap[exif.camera_id] || null,
+                lens: lensMap[exif.lens_id] || null,
+                focallength: focallengthConverted || null,
+                aperture: "f/" + exif.aperture || null,
+                shutter: exif.shutter + "s" || null,
+                iso: exif.iso || null
+            },
+            visibility: {
+                is_visible_homepage: visibility.is_visible_homepage || false,
+                is_visible_series: visibility.is_visible_series || false
+            }
+        };
+    });
+
+    return imageIndex ? result[0] || null : result;
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     setCurrentYear();
     handleStaticProfileImage();
 
+    const imageList = await loadImageMetadata('json/imageData.json');
+
+    const pathname = window.location.pathname;
+    const filename = pathname.substring(pathname.lastIndexOf("/") + 1);
+
     try {
-        const imageList = await loadImageMetadata('json/data.json');
+        if (filename === "index.html" || filename === "") {
+            const shouldUsePlaceholder = await isSlowConnection(imageList[0].src);
 
-        const shouldUsePlaceholder = await isSlowConnection(imageList[0].src);
+            await renderGridLayout(imageList);
 
-        await renderGridLayout(imageList);
+            if (shouldUsePlaceholder) {
+                await renderBlurPlaceholders(imageList);
+            }
 
-        if (shouldUsePlaceholder) {
-            await renderBlurPlaceholders(imageList);
+            await loadFullResolutionImages(imageList);
+
+            await loadLightbox();
+            setLightbox(imageList);
         }
 
-        await loadFullResolutionImages(imageList);
-
-        await loadLightbox();
-        setLightbox(imageList);
+        if (filename === "series.html") {
+            await populateSeriesImages(imageList);
+        }
     } catch (error) {
-        console.error("Error during portfolio setup:", error);
+        console.log("Error during page setup:", error);
     }
 });
 
@@ -412,6 +494,45 @@ function handleStaticProfileImage() {
     // If already loaded from cache
     if (profileImg.complete && profileImg.naturalWidth !== 0) {
         markLoaded();
+    }
+}
+
+async function populateSeriesImages(imageList) {
+    try {
+        imageList.forEach(image => {
+            const seriesName = image.series;
+            if (!seriesName) return; // Image is not assigned to a serie
+
+            const seriesClassName = seriesName.toLowerCase().replace(/\s+/g, "-");
+
+            const seriesCard = document.querySelector(`.series-card.${seriesClassName}`);
+            if (!seriesCard) return;
+
+            const imageContainer = seriesCard.querySelector(".series-card-images");
+            if (!imageContainer) return;
+
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("series-card-grid-item");
+
+            const img = document.createElement("img");
+            img.src = image.src;
+            img.alt = image.alt || '';
+            img.loading = 'lazy';
+
+            wrapper.appendChild(img);
+            imageContainer.appendChild(wrapper);
+
+            // Update photo count
+            // const countElement = seriesCard.querySelector(".series-card-photo-count");
+            // if (countElement) {
+            //     const currentMatch = countElement.textContent.match(/\d+/);
+            //     const currentCount = currentMatch ? parseInt(currentMatch[0], 10) : 0;
+            //     const newCount = currentCount + 1;
+            //     countElement.textContent = `${newCount} photo${newCount !== 1 ? 's' : ''}`;
+            // }
+        });
+    } catch (err) {
+        console.error("Failed to load or process image data:", err);
     }
 }
 

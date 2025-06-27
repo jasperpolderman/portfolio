@@ -14,6 +14,7 @@
       "shutter": "1/200s",
       "ISO": "100"
     },
+    "series": "Angkor Wat Temple Complex",
     "width": "1600",
     "height": "2000"
   },
@@ -32,6 +33,7 @@
       "shutter": "1/160s",
       "ISO": "100"
     },
+    "series": "Angkor Wat Temple Complex",
     "width": "1600",
     "height": "2000"
   },
@@ -50,6 +52,7 @@
       "shutter": "1/800s",
       "ISO": "1000"
     },
+    "series": "Wildlife",
     "width": "1600",
     "height": "2000"
   },
@@ -68,6 +71,7 @@
       "shutter": "1/200s",
       "ISO": "160"
     },
+    "series": "Angkor Wat Temple Complex",
     "width": "1333",
     "height": "2000"
   },
@@ -86,6 +90,7 @@
       "shutter": "1/200s",
       "ISO": "320"
     },
+    "series": "Angkor Wat Temple Complex",
     "width": "1600",
     "height": "2000"
   },
@@ -104,6 +109,7 @@
       "shutter": "1/1250s",
       "ISO": "100"
     },
+    "series": "Angkor Wat Temple Complex",
     "width": "2000",
     "height": "1125"
   },
@@ -122,6 +128,7 @@
       "shutter": "1/400s",
       "ISO": "100"
     },
+    "series": "Angkor Wat Temple Complex",
     "width": "2000",
     "height": "851"
   },
@@ -140,6 +147,7 @@
       "shutter": "1/200s",
       "ISO": "500"
     },
+    "series": "Angkor Wat Temple Complex",
     "width": "2000",
     "height": "851"
   },
@@ -158,6 +166,7 @@
       "shutter": "1/100s",
       "ISO": "1000"
     },
+    "series": "Angkor Wat Temple Complex",
     "width": "1600",
     "height": "2000"
   },
@@ -176,6 +185,7 @@
       "shutter": "1/125s",
       "ISO": "100"
     },
+    "series": "Angkor Wat Temple Complex",
     "width": "1600",
     "height": "2000"
   },
@@ -194,6 +204,7 @@
       "shutter": "1/320s",
       "ISO": "100"
     },
+    "series": "Japan",
     "width": "2000",
     "height": "1125"
   },
@@ -212,6 +223,7 @@
       "shutter": "1/800s",
       "ISO": "100"
     },
+    "series": "Japan",
     "width": "1600",
     "height": "2000"
   },
@@ -230,6 +242,7 @@
       "shutter": "1/800s",
       "ISO": "100"
     },
+    "series": "Japan",
     "width": "1600",
     "height": "2000"
   },
@@ -248,6 +261,7 @@
       "shutter": "1/640s",
       "ISO": "100"
     },
+    "series": "Japan",
     "width": "2000",
     "height": "1125"
   },
@@ -266,6 +280,7 @@
       "shutter": "1/40s",
       "ISO": "4000"
     },
+    "series": "Japan",
     "width": "2000",
     "height": "1333"
   },
@@ -284,6 +299,7 @@
       "shutter": "1/60s",
       "ISO": "3200"
     },
+    "series": "Japan",
     "width": "1600",
     "height": "2000"
   },
@@ -302,6 +318,7 @@
       "shutter": "1/25s",
       "ISO": "2500"
     },
+    "series": "Japan",
     "width": "2000",
     "height": "1125"
   },
@@ -320,6 +337,7 @@
       "shutter": "1/50s",
       "ISO": "2500"
     },
+    "series": "Japan",
     "width": "1333",
     "height": "2000"
   },
@@ -338,6 +356,7 @@
       "shutter": "1/60s",
       "ISO": "800"
     },
+    "series": "Japan",
     "width": "2000",
     "height": "1125"
   },
@@ -356,6 +375,7 @@
       "shutter": "1/250",
       "ISO": "320"
     },
+    "series": "Japan",
     "width": "1333",
     "height": "2000"
   },
@@ -374,6 +394,7 @@
       "shutter": "1/400s",
       "ISO": "4000"
     },
+    "series": "Wildlife",
     "width": "1600",
     "height": "2000"
   },
@@ -392,6 +413,7 @@
       "shutter": "1/60s",
       "ISO": "100"
     },
+    "series": "Japan",
     "width": "1600",
     "height": "2000"
   },
@@ -410,6 +432,7 @@
       "shutter": "1/100s",
       "ISO": "400"
     },
+    "series": "Japan",
     "width": "1600",
     "height": "2000"
   },
@@ -428,6 +451,7 @@
       "shutter": "1/80s",
       "ISO": "100"
     },
+    "series": "Japan",
     "width": "2000",
     "height": "1333"
   },
@@ -446,6 +470,7 @@
       "shutter": "1/100s",
       "ISO": "400"
     },
+    "series": "Japan",
     "width": "2000",
     "height": "1125"
   },
@@ -464,6 +489,7 @@
       "shutter": "1/100s",
       "ISO": "100"
     },
+    "series": "Japan",
     "width": "2000",
     "height": "1125"
   },
@@ -482,6 +508,7 @@
       "shutter": "1/100s",
       "ISO": "800"
     },
+    "series": "The Netherlands",
     "width": "2000",
     "height": "1125"
   },
@@ -500,6 +527,7 @@
       "shutter": "1/125s",
       "ISO": "500"
     },
+    "series": "Lapland",
     "width": "1600",
     "height": "2000"
   },
@@ -518,6 +546,7 @@
       "shutter": "1/250s",
       "ISO": "200"
     },
+    "series": "Lapland",
     "width": "1600",
     "height": "2000"
   },
@@ -536,6 +565,7 @@
       "shutter": "1/250s",
       "ISO": "200"
     },
+    "series": "Lapland",
     "width": "1600",
     "height": "2000"
   },
@@ -554,6 +584,7 @@
       "shutter": "1/320s",
       "ISO": "320"
     },
+    "series": "Lapland",
     "width": "1600",
     "height": "2000"
   },
@@ -572,6 +603,7 @@
       "shutter": "1/200s",
       "ISO": "200"
     },
+    "series": "Lapland",
     "width": "1600",
     "height": "2000"
   },
@@ -590,6 +622,7 @@
       "shutter": "1/50s",
       "ISO": "1000"
     },
+    "series": "Lapland",
     "width": "1600",
     "height": "2000"
   },
@@ -608,6 +641,7 @@
       "shutter": "1/160s",
       "ISO": "160"
     },
+    "series": "Lapland",
     "width": "1600",
     "height": "2000"
   },
@@ -626,6 +660,7 @@
       "shutter": "1/400s",
       "ISO": "100"
     },
+    "series": "Malaysia",
     "width": "2000",
     "height": "1125"
   },
@@ -644,6 +679,7 @@
       "shutter": "f/16",
       "ISO": "800"
     },
+    "series": "Malaysia",
     "width": "2000",
     "height": "1125"
   },
@@ -662,6 +698,7 @@
       "shutter": "1/100s",
       "ISO": "200"
     },
+    "series": "Malaysia",
     "width": "1600",
     "height": "2000"
   },
@@ -680,6 +717,7 @@
       "shutter": "1/800s",
       "ISO": "160"
     },
+    "series": "Malaysia",
     "width": "2000",
     "height": "1125"
   },
@@ -698,6 +736,7 @@
       "shutter": "1/160s",
       "ISO": "100"
     },
+    "series": "Dolomites",
     "width": "2000",
     "height": "1125"
   },
@@ -716,6 +755,7 @@
       "shutter": "1/100s",
       "ISO": "100"
     },
+    "series": "Dolomites",
     "width": "1600",
     "height": "2000"
   },
@@ -734,6 +774,7 @@
       "shutter": "1/100s",
       "ISO": "1600"
     },
+    "series": "Thailand",
     "width": "1600",
     "height": "2000"
   },
@@ -752,6 +793,7 @@
       "shutter": "1/2s",
       "ISO": "100"
     },
+    "series": "Thailand",
     "width": "2000",
     "height": "1125"
   },
@@ -770,6 +812,7 @@
       "shutter": "1/2s",
       "ISO": "100"
     },
+    "series": "Thailand",
     "width": "2000",
     "height": "851"
   },
@@ -788,6 +831,7 @@
       "shutter": "1/4s",
       "ISO": "125"
     },
+    "series": "Thailand",
     "width": "2000",
     "height": "1125"
   },
@@ -806,6 +850,7 @@
       "shutter": "1s",
       "ISO": "100"
     },
+    "series": "Thailand",
     "width": "2000",
     "height": "1125"
   },
@@ -824,6 +869,7 @@
       "shutter": "1/50s",
       "ISO": "160"
     },
+    "series": "Thailand",
     "width": "2000",
     "height": "1125"
   },
@@ -842,6 +888,7 @@
       "shutter": "1/800s",
       "ISO": "100"
     },
+    "series": "Thailand",
     "width": "1600",
     "height": "2000"
   },
@@ -860,6 +907,7 @@
       "shutter": "1/320s",
       "ISO": "125"
     },
+    "series": "Thailand",
     "width": "1600",
     "height": "2000"
   },
@@ -878,6 +926,7 @@
       "shutter": "1/1000s",
       "ISO": "100"
     },
+    "series": "Thailand",
     "width": "2000",
     "height": "1125"
   },
@@ -896,6 +945,7 @@
       "shutter": "1/200s",
       "ISO": "100"
     },
+    "series": "Thailand",
     "width": "2000",
     "height": "1125"
   },
@@ -914,6 +964,7 @@
       "shutter": "1/160s",
       "ISO": "100"
     },
+    "series": "Thailand",
     "width": "1600",
     "height": "2000"
   },
@@ -932,6 +983,7 @@
       "shutter": "1/400s",
       "ISO": "6400"
     },
+    "series": "Wildlife",
     "width": "1600",
     "height": "2000"
   },
@@ -950,6 +1002,7 @@
       "shutter": "1/200s",
       "ISO": "400"
     },
+    "series": "Thailand",
     "width": "1600",
     "height": "2000"
   },
@@ -968,6 +1021,7 @@
       "shutter": "1/125s",
       "ISO": "200"
     },
+    "series": "Thailand",
     "width": "2000",
     "height": "1125"
   },
@@ -986,6 +1040,7 @@
       "shutter": "1/200s",
       "ISO": "400"
     },
+    "series": "Thailand",
     "width": "2000",
     "height": "1125"
   },
@@ -1004,6 +1059,7 @@
       "shutter": "1/400s",
       "ISO": "100"
     },
+    "series": "Thailand",
     "width": "2000",
     "height": "1125"
   },
@@ -1022,6 +1078,7 @@
       "shutter": "1/125s",
       "ISO": "400"
     },
+    "series": "Thailand",
     "width": "1600",
     "height": "2000"
   },
@@ -1040,6 +1097,7 @@
       "shutter": "1/100s",
       "ISO": "100"
     },
+    "series": "Vietnam",
     "width": "2000",
     "height": "851"
   },
@@ -1058,6 +1116,7 @@
       "shutter": "1/160s",
       "ISO": "125"
     },
+    "series": "Vietnam",
     "width": "1600",
     "height": "2000"
   },
@@ -1076,6 +1135,7 @@
       "shutter": "1/160s",
       "ISO": "200"
     },
+    "series": "Vietnam",
     "width": "2000",
     "height": "1125"
   },
@@ -1094,6 +1154,7 @@
       "shutter": "1/160s",
       "ISO": "160"
     },
+    "series": "Vietnam",
     "width": "1600",
     "height": "2000"
   },
@@ -1112,6 +1173,7 @@
       "shutter": "1/250s",
       "ISO": "100"
     },
+    "series": "Vietnam",
     "width": "1600",
     "height": "2000"
   },
@@ -1130,6 +1192,7 @@
       "shutter": "1/160s",
       "ISO": "2000"
     },
+    "series": "Vietnam",
     "width": "2000",
     "height": "1125"
   },
@@ -1148,6 +1211,7 @@
       "shutter": "1/250s",
       "ISO": "100"
     },
+    "series": "Vietnam",
     "width": "2000",
     "height": "1125"
   }

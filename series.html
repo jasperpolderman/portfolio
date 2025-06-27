@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jasper's Photography Portfolio - Series</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
   </head>
 
   <body>
@@ -40,14 +41,27 @@
 
         <!-- Right side: main showcase area -->
         <section class="series" aria-label="Photography Series">
-            <!-- JavaScript inserts images here! -->
-            <p>Coming soon!</p>
+            <p class="page-label">Series</p>
+
+            <div class="series-cards-container">
+              <div class="series-card lapland">
+                <div class="series-card-info">
+                  <div class="series-card-title">Coming soon!</div>
+                  <div class="series-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad sequi quod dolore voluptatum perspiciatis possimus doloribus eum mollitia. Nisi quia placeat eum hic soluta blanditiis quo cumque, perspiciatis earum.</div>
+                  <div class="series-card-photo-count">0 photos</div>
+                </div>
+
+                <div class="series-card-images">
+                  <!-- JavaScript inserts images here! Class: 'series-card-grid-item' -->
+                </div>
+              </div>
+            </div>
         </section>
     </main>
 
     <div id="lightbox-container"></div>
 
-    <script src="javascript/script.js"></script>
+    <script type="module", src="javascript/main.js"></script>
 
   </body>
 </html>

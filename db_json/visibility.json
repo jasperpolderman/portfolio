@@ -1,0 +1,386 @@
+[
+    {
+        "visibility_id": 1,
+        "image_id": 1,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 2,
+        "image_id": 2,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 3,
+        "image_id": 3,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 4,
+        "image_id": 4,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 5,
+        "image_id": 5,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 6,
+        "image_id": 6,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 7,
+        "image_id": 7,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 8,
+        "image_id": 8,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 9,
+        "image_id": 9,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 10,
+        "image_id": 10,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 11,
+        "image_id": 11,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 12,
+        "image_id": 12,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 13,
+        "image_id": 13,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 14,
+        "image_id": 14,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 15,
+        "image_id": 15,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 16,
+        "image_id": 16,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 17,
+        "image_id": 17,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 18,
+        "image_id": 18,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 19,
+        "image_id": 19,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 20,
+        "image_id": 20,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 21,
+        "image_id": 21,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 22,
+        "image_id": 22,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 23,
+        "image_id": 23,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 24,
+        "image_id": 24,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 25,
+        "image_id": 25,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 26,
+        "image_id": 26,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 27,
+        "image_id": 27,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 28,
+        "image_id": 28,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 29,
+        "image_id": 29,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 30,
+        "image_id": 30,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 31,
+        "image_id": 31,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 32,
+        "image_id": 32,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 33,
+        "image_id": 33,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 34,
+        "image_id": 34,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 35,
+        "image_id": 35,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 36,
+        "image_id": 36,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 37,
+        "image_id": 37,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 38,
+        "image_id": 38,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 39,
+        "image_id": 39,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 40,
+        "image_id": 40,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 41,
+        "image_id": 41,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 42,
+        "image_id": 42,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 43,
+        "image_id": 43,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 44,
+        "image_id": 44,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 45,
+        "image_id": 45,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 46,
+        "image_id": 46,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 47,
+        "image_id": 47,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 48,
+        "image_id": 48,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 49,
+        "image_id": 49,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 50,
+        "image_id": 50,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 51,
+        "image_id": 51,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 52,
+        "image_id": 52,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 53,
+        "image_id": 53,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 54,
+        "image_id": 54,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 55,
+        "image_id": 55,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 56,
+        "image_id": 56,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 57,
+        "image_id": 57,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 58,
+        "image_id": 58,
+        "is_visible_homepage": true,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 59,
+        "image_id": 59,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 60,
+        "image_id": 60,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 61,
+        "image_id": 61,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 62,
+        "image_id": 62,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 63,
+        "image_id": 63,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    },
+    {
+        "visibility_id": 64,
+        "image_id": 64,
+        "is_visible_homepage": false,
+        "is_visible_series": true
+    }
+]

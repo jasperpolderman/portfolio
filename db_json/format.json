@@ -1,0 +1,14 @@
+[
+    {
+        "format_id": 1,
+        "format_name": "APS-C"
+    },
+    {
+        "format_id": 2,
+        "format_name": "Full-frame"
+    },
+    {
+        "format_id": 3,
+        "format_name": "Medium format"
+    }
+]

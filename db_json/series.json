@@ -1,0 +1,47 @@
+[
+    {
+        "series_id": 1,
+        "series_name": "Angkor Wat",
+        "series_description": ""
+    },
+    {
+        "series_id": 2,
+        "series_name": "Japan",
+        "series_description": ""
+    },
+    {
+        "series_id": 3,
+        "series_name": "The Netherlands",
+        "series_description": ""
+    },
+    {
+        "series_id": 4,
+        "series_name": "Dolomites",
+        "series_description": ""
+    },
+    {
+        "series_id": 5,
+        "series_name": "Lapland",
+        "series_description": ""
+    },
+    {
+        "series_id": 6,
+        "series_name": "Thailand",
+        "series_description": ""
+    },
+    {
+        "series_id": 7,
+        "series_name": "Vietnam",
+        "series_description": ""
+    },
+    {
+        "series_id": 8,
+        "series_name": "Wildlife",
+        "series_description": ""
+    },
+    {
+        "series_id": 9,
+        "series_name": "Malaysia",
+        "series_description": ""
+    }
+]
