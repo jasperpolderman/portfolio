@@ -12,7 +12,7 @@ export function renderGridPlaceholders(imageList, gridSelector, itemClassName) {
     const ratio = (img.dimensions.height / img.dimensions.width) * 100;
     const item = document.createElement('div');
     item.classList.add(itemClassName);
-    item.dataset.index = img.imageId;
+    item.dataset.index = img.image_id;
     item.style.setProperty('--aspect-ratio', `${ratio}%`);
     grid.appendChild(item);
   });
@@ -34,6 +34,104 @@ export function renderThumbnailPlaceholders(imageList, itemSelector, thumbClassN
   });
 }
 
+export async function renderSeriesCards(seriesList, fetchImageDataFn, containerSelector) {
+  const seriesSection = document.querySelector(containerSelector);
+  if (!seriesSection) return;
+  
+  for (const series of seriesList) {
+    const images = await fetchImageDataFn({ seriesId: series.series_id });
+
+    const link = document.createElement('a');
+    link.href = `series-view.html?series_id=${series.series_id}`;
+    link.className = 'series-card-link';
+
+    const container = document.createElement('div');
+    container.className = 'series-cards-container';
+
+    const card = document.createElement('div');
+    card.className = `series-card ${series.series_name.toLowerCase().replace(/\s+/g, '-')}`;
+
+    const cardInfo = document.createElement('div');
+    cardInfo.className = 'series-card-info';
+
+    populateSeriesTitle('series-card-title', series.series_name, true, cardInfo);
+    populateSeriesDescription('series-card-description', series.series_description, true, cardInfo);
+    populateSeriesPhotoCount('series-card-photo-count', images.length, true, cardInfo);
+
+    const photoCount = document.createElement('div');
+    photoCount.className = 'series-card-photo-count';
+    photoCount.textContent = `${images.length} photos`;
+
+    const imagesContainer = document.createElement('div');
+    imagesContainer.className = 'series-card-images';
+
+    images.forEach(image => {
+      const img = document.createElement('img');
+      img.src = image.src;
+      img.alt = image.alt || '';
+      img.className = 'series-card-grid-item';
+      imagesContainer.appendChild(img);
+    });
+
+    card.appendChild(cardInfo);
+    card.appendChild(imagesContainer);
+    container.appendChild(card);
+    link.appendChild(container);
+    seriesSection.appendChild(link);
+
+    const elements = document.querySelectorAll('.series-card-images');
+
+    const observer = new ResizeObserver(entries => {
+      for (const entry of entries) {
+        const el = entry.target;
+        const width = entry.contentRect.width;
+        el.style.setProperty('--series-card-width', `${width}px`);
+      }
+    });
+
+    elements.forEach(el => observer.observe(el));
+  }
+}
+
+export async function populateSeriesTitle(className, seriesName, isAppend, parent) {
+  if (isAppend) {
+    const title = document.createElement('div');
+    title.className = className;
+    title.textContent = seriesName;
+    parent.appendChild(title);
+  } else if (!isAppend) {
+    const title = document.querySelector('.' + className);
+    title.textContent = seriesName;
+  }
+}
+
+export async function populateSeriesDescription(className, seriesDescription, isAppend, parent) {
+  if (isAppend) {
+      const description = document.createElement('div');
+      description.className = className;
+      description.textContent = seriesDescription;
+      parent.appendChild(description);
+  } else if (!isAppend) {
+      const description = document.querySelector('.' + className);
+      description.textContent = seriesDescription;
+  }
+}
+
+export async function populateSeriesPhotoCount(className, count, isAppend, parent) {
+  const label = `${count} photo${count === 1 ? '' : 's'}`;
+
+  if (isAppend) {
+    const photoCount = document.createElement('div');
+    photoCount.className = className;
+    photoCount.textContent = label;
+    parent.appendChild(photoCount);
+  } else if (!isAppend) {
+      const photoCount = document.querySelector('.' + className);
+      photoCount.textContent = label;
+  }
+}
+
+
 /**
  * Inserts high-res images and overlays into each grid item,
  * replacing thumbnails once loaded.
@@ -42,10 +140,13 @@ export function populateGridWithHighResImages(imageList, itemSelector, wrapperCl
   return new Promise(resolve => {
     const items = document.querySelectorAll(itemSelector);
 
+    const imageMap = new Map();
+    imageList.forEach(img => imageMap.set(String(img.image_id), img));
+
     const insert = () => {
       items.forEach(item => {
-        const idx = Number(item.dataset.index) - 1;
-        const imgData = imageList[idx];
+        const id = item.dataset.index;
+        const imgData = imageMap.get(id);
         if (!imgData) return;
 
         let wrapper = item.querySelector(`.${wrapperClassName}`);

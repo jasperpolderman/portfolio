@@ -1,0 +1,17 @@
+[
+    {
+        "series_id": 1,
+        "series_name": "Landscape",
+        "series_description": "Vast horizons, dramatic skies, and natural beauty captured in quiet moments — this series explores the raw, sweeping essence of nature."
+    },
+    {
+        "series_id": 2,
+        "series_name": "Wildlife",
+        "series_description": "A glimpse into the untamed — intimate portraits and action shots of animals in their natural habitats, revealing personality and instinct."
+    },
+    {
+        "series_id": 3,
+        "series_name": "Landmarks",
+        "series_description": "Iconic architecture, monuments, and structures — this series captures the stories etched into the world’s most memorable places."
+    }
+]

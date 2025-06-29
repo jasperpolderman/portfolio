@@ -21,8 +21,8 @@ export function initializeLightbox(imageList) {
       const imageId = Number(item.dataset.index);
       if (Number.isNaN(imageId)) return;
 
-      const image = imageList.find(img => img.imageId === imageId);
-      const index = imageList.findIndex(img => img.imageId === imageId);
+      const image = imageList.find(img => img.image_id === imageId);
+      const index = imageList.findIndex(img => img.image_id === imageId);
 
       if (!image || index === -1) return;
 
@@ -37,9 +37,9 @@ export function initializeLightbox(imageList) {
     if (e.target === lightbox) closeLightbox();
   });
 
-  document.getElementById('lightbox-close')?.addEventListener('click', closeLightbox);
-  document.getElementById('lightbox-next')?.addEventListener('click', () => navigateImage(imageList, +1));
-  document.getElementById('lightbox-prev')?.addEventListener('click', () => navigateImage(imageList, -1));
+  document.getElementById('navigation-close')?.addEventListener('click', closeLightbox);
+  document.getElementById('navigation-next')?.addEventListener('click', () => navigateImage(imageList, +1));
+  document.getElementById('navigation-prev')?.addEventListener('click', () => navigateImage(imageList, -1));
 }
 
 function showImage(image, imageWrapper, bgOverlay) {

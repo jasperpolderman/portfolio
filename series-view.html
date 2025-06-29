@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jasper's Photography Portfolio - Series View</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    </head>
+
+    <body>
+        <main class="container">
+            <!-- Left side: profile + nav -->
+            <aside class="sidebar">
+                <div class="profile">
+                    <div class="profile-scroll">
+                        <div class="navigation-btn" id="navigation-back" aria-label="Back">
+                            <i class="fa-light fa-arrow-left"></i>
+                        </div>
+
+                        <div class="series-view-info-container">
+                            <ul class="nav-links">
+                                <li><a href="series.html">Series</a></li>
+                            </ul>
+                            <div class="series-title"></div>
+                            <div class="series-photo-count"></div>
+                            <div class="series-description"></div>
+
+                            <div class="small-profile">
+                                <a href="index.html">
+                                    <img class="small-profile-picture" src="images/fullsize/profile-picture.jpg">
+                                    <p class="small-profile-name">Jasper Polderman</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="copyright">
+                        <p>&copy; 2024-<span id="currentYear"></span> Jasper Polderman.<span class="rights"> All rights reserved.</span></p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right side: main showcase area -->
+            <section class="series-view" aria-label="Photography Series View">
+                <!-- JavaScript insert series-card structure -->
+            </section>
+        </main>
+
+        <div id="lightbox-container"></div>
+
+        <script type="module", src="javascript/main.js"></script>
+
+    </body>
+</html>

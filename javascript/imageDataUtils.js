@@ -2,10 +2,11 @@
  * Fetches and enriches image data from JSON files.
  * @param {Object} options
  * @param {number|null} options.imageId - Specific image ID to fetch (or null for all).
+ * @param {number|null} options.seriesId - Specific series ID to fetch images for
  * @param {boolean} options.homepageOnly - Whether to filter for homepage visibility.
  * @returns {Promise<Array|Object|null>}
  */
-export async function fetchImageData({ imageId = null, homepageOnly = false } = {}) {
+export async function fetchImageData({ imageId = null, seriesId = null, homepageOnly = false } = {}) {
   const [
     images,
     exifList,
@@ -14,12 +15,12 @@ export async function fetchImageData({ imageId = null, homepageOnly = false } = 
     seriesList,
     visibilityList
   ] = await Promise.all([
-    fetch('db_json/images.json').then(r => r.json()),
-    fetch('db_json/exif.json').then(r => r.json()),
-    fetch('db_json/camera.json').then(r => r.json()),
-    fetch('db_json/lens.json').then(r => r.json()),
-    fetch('db_json/series.json').then(r => r.json()),
-    fetch('db_json/visibility.json').then(r => r.json()),
+    fetch('json/images.json').then(r => r.json()),
+    fetch('json/exif.json').then(r => r.json()),
+    fetch('json/camera.json').then(r => r.json()),
+    fetch('json/lens.json').then(r => r.json()),
+    fetch('json/series.json').then(r => r.json()),
+    fetch('json/visibility.json').then(r => r.json()),
   ]);
 
   const cameraMap = Object.fromEntries(cameraList.map(c => [c.camera_id, c.camera_name]));
@@ -28,10 +29,17 @@ export async function fetchImageData({ imageId = null, homepageOnly = false } = 
   const visibleMap = Object.fromEntries(visibilityList.map(v => [v.image_id, v]));
   const exifMap   = Object.fromEntries(exifList.map(e => [e.image_id, e]));
 
+  // Base filter
   let filtered = imageId != null
     ? images.filter(img => img.image_id === imageId)
     : images;
 
+  // Filter by series_id if provided
+  if (seriesId != null) {
+    filtered = filtered.filter(img => img.series_id === seriesId);
+  }
+
+  // Filter by homepage visibility if requested
   if (homepageOnly) {
     filtered = filtered.filter(img => visibleMap[img.image_id]?.is_visible_homepage);
   }
@@ -50,7 +58,7 @@ export async function fetchImageData({ imageId = null, homepageOnly = false } = 
     }
 
     return {
-      imageId: img.image_id,
+      image_id: img.image_id,
       src: img.src,
       title: img.title,
       date: img.date,
@@ -78,6 +86,12 @@ export async function fetchImageData({ imageId = null, homepageOnly = false } = 
   });
 
   return imageId != null ? (result[0] || null) : result;
+}
+
+export async function fetchSeriesId() {
+  const response = await fetch('json/series.json');
+  if (!response.ok) throw new Error('Failed to fetch series data');
+  return await response.json();
 }
 
 /**

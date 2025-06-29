@@ -1,15 +1,5 @@
 [
     {
-        "exif_id": 1,
-        "image_id": 1,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 150,
-        "aperture": 6.3,
-        "shutter": "1/200",
-        "iso": 100
-    },
-    {
         "exif_id": 2,
         "image_id": 2,
         "camera_id": 1,
@@ -40,16 +30,6 @@
         "iso": 160
     },
     {
-        "exif_id": 5,
-        "image_id": 5,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 24,
-        "aperture": 8,
-        "shutter": "1/200",
-        "iso": 320
-    },
-    {
         "exif_id": 6,
         "image_id": 6,
         "camera_id": 1,
@@ -70,16 +50,6 @@
         "iso": 100
     },
     {
-        "exif_id": 8,
-        "image_id": 8,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 35,
-        "aperture": 8,
-        "shutter": "1/200",
-        "iso": 500
-    },
-    {
         "exif_id": 9,
         "image_id": 9,
         "camera_id": 1,
@@ -88,26 +58,6 @@
         "aperture": 5.6,
         "shutter": "1/100",
         "iso": 1000
-    },
-    {
-        "exif_id": 10,
-        "image_id": 10,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 29,
-        "aperture": 8,
-        "shutter": "1/125",
-        "iso": 100
-    },
-    {
-        "exif_id": 11,
-        "image_id": 11,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 24,
-        "aperture": 7.1,
-        "shutter": "1/320",
-        "iso": 100
     },
     {
         "exif_id": 12,
@@ -140,16 +90,6 @@
         "iso": 100
     },
     {
-        "exif_id": 15,
-        "image_id": 15,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 47,
-        "aperture": 5.6,
-        "shutter": "1/40",
-        "iso": 4000
-    },
-    {
         "exif_id": 16,
         "image_id": 16,
         "camera_id": 1,
@@ -160,16 +100,6 @@
         "iso": 100
     },
     {
-        "exif_id": 17,
-        "image_id": 17,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 18,
-        "aperture": 7.1,
-        "shutter": "1/25",
-        "iso": 2500
-    },
-    {
         "exif_id": 18,
         "image_id": 18,
         "camera_id": 1,
@@ -178,26 +108,6 @@
         "aperture": 7.1,
         "shutter": "1/50",
         "iso": 2500
-    },
-    {
-        "exif_id": 19,
-        "image_id": 19,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 18,
-        "aperture": 7.1,
-        "shutter": "1/60",
-        "iso": 800
-    },
-    {
-        "exif_id": 20,
-        "image_id": 20,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 39,
-        "aperture": 5,
-        "shutter": "1/250",
-        "iso": 320
     },
     {
         "exif_id": 21,
@@ -240,16 +150,6 @@
         "iso": 100
     },
     {
-        "exif_id": 25,
-        "image_id": 25,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 41,
-        "aperture": 7.1,
-        "shutter": "1/100",
-        "iso": 400
-    },
-    {
         "exif_id": 26,
         "image_id": 26,
         "camera_id": 1,
@@ -270,32 +170,12 @@
         "iso": 800
     },
     {
-        "exif_id": 28,
-        "image_id": 28,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 24,
-        "aperture": 8,
-        "shutter": "1/125",
-        "iso": 500
-    },
-    {
         "exif_id": 29,
         "image_id": 29,
         "camera_id": 1,
         "lens_id": 1,
         "focallength": 39,
         "aperture": 8,
-        "shutter": "1/250",
-        "iso": 200
-    },
-    {
-        "exif_id": 30,
-        "image_id": 30,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 47,
-        "aperture": 5.6,
         "shutter": "1/250",
         "iso": 200
     },
@@ -308,6 +188,16 @@
         "aperture": 8,
         "shutter": "1/320",
         "iso": 320
+    },
+    {
+        "exif_id": 32,
+        "image_id": 32,
+        "camera_id": 1,
+        "lens_id": 1,
+        "focallength": 18,
+        "aperture": 11,
+        "shutter": "1/200",
+        "iso": 200
     },
     {
         "exif_id": 33,
@@ -324,24 +214,14 @@
         "image_id": 34,
         "camera_id": 1,
         "lens_id": 1,
-        "focallength": 18,
-        "aperture": 5.6,
-        "shutter": "1/50",
-        "iso": 1000
-    },
-    {
-        "exif_id": 35,
-        "image_id": 35,
-        "camera_id": 1,
-        "lens_id": 1,
         "focallength": 35,
         "aperture": 8,
         "shutter": "1/160",
         "iso": 160
     },
     {
-        "exif_id": 36,
-        "image_id": 36,
+        "exif_id": 35,
+        "image_id": 35,
         "camera_id": 1,
         "lens_id": 1,
         "focallength": 18,
@@ -380,36 +260,6 @@
         "iso": 160
     },
     {
-        "exif_id": 40,
-        "image_id": 40,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 18,
-        "aperture": 10,
-        "shutter": "1/160",
-        "iso": 100
-    },
-    {
-        "exif_id": 41,
-        "image_id": 41,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 24,
-        "aperture": 11,
-        "shutter": "1/100",
-        "iso": 100
-    },
-    {
-        "exif_id": 42,
-        "image_id": 42,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 59,
-        "aperture": 8,
-        "shutter": "1/100",
-        "iso": 1600
-    },
-    {
         "exif_id": 43,
         "image_id": 43,
         "camera_id": 1,
@@ -420,26 +270,6 @@
         "iso": 100
     },
     {
-        "exif_id": 44,
-        "image_id": 44,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 18,
-        "aperture": 13,
-        "shutter": "1/2",
-        "iso": 100
-    },
-    {
-        "exif_id": 45,
-        "image_id": 45,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 18,
-        "aperture": 8,
-        "shutter": "1/4",
-        "iso": 125
-    },
-    {
         "exif_id": 46,
         "image_id": 46,
         "camera_id": 1,
@@ -448,16 +278,6 @@
         "aperture": 13,
         "shutter": "1",
         "iso": 100
-    },
-    {
-        "exif_id": 47,
-        "image_id": 47,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 18,
-        "aperture": 8,
-        "shutter": "1/50",
-        "iso": 160
     },
     {
         "exif_id": 48,
@@ -480,16 +300,6 @@
         "iso": 125
     },
     {
-        "exif_id": 50,
-        "image_id": 50,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 45,
-        "aperture": 8,
-        "shutter": "1/1000",
-        "iso": 100
-    },
-    {
         "exif_id": 51,
         "image_id": 51,
         "camera_id": 1,
@@ -508,36 +318,6 @@
         "aperture": 8,
         "shutter": "1/160",
         "iso": 100
-    },
-    {
-        "exif_id": 53,
-        "image_id": 53,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 150,
-        "aperture": 6.3,
-        "shutter": "1/400",
-        "iso": 6400
-    },
-    {
-        "exif_id": 54,
-        "image_id": 54,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 18,
-        "aperture": 3.5,
-        "shutter": "1/200",
-        "iso": 400
-    },
-    {
-        "exif_id": 55,
-        "image_id": 55,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 18,
-        "aperture": 13,
-        "shutter": "1/125",
-        "iso": 200
     },
     {
         "exif_id": 56,
@@ -568,75 +348,5 @@
         "aperture": 8,
         "shutter": "1/125",
         "iso": 400
-    },
-    {
-        "exif_id": 59,
-        "image_id": 59,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 56,
-        "aperture": 8,
-        "shutter": "1/100",
-        "iso": 100
-    },
-    {
-        "exif_id": 60,
-        "image_id": 60,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 35,
-        "aperture": 6.3,
-        "shutter": "1/160",
-        "iso": 125
-    },
-    {
-        "exif_id": 61,
-        "image_id": 61,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 50,
-        "aperture": 8,
-        "shutter": "1/160",
-        "iso": 200
-    },
-    {
-        "exif_id": 62,
-        "image_id": 62,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 24,
-        "aperture": 4,
-        "shutter": "1/160",
-        "iso": 160
-    },
-    {
-        "exif_id": 63,
-        "image_id": 63,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 50,
-        "aperture": 5.6,
-        "shutter": "1/250",
-        "iso": 100
-    },
-    {
-        "exif_id": 64,
-        "image_id": 64,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 44,
-        "aperture": 5,
-        "shutter": "1/160",
-        "iso": 2000
-    },
-    {
-        "exif_id": 65,
-        "image_id": 65,
-        "camera_id": 1,
-        "lens_id": 1,
-        "focallength": 43,
-        "aperture": 8,
-        "shutter": "1/250",
-        "iso": 100
     }
 ]
