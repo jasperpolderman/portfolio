@@ -23,30 +23,28 @@ export async function fetchImageData({ imageId = null, seriesId = null, homepage
     fetch('json/visibility.json').then(r => r.json()),
   ]);
 
-  const cameraMap = Object.fromEntries(cameraList.map(c => [c.camera_id, c.camera_name]));
-  const lensMap   = Object.fromEntries(lensList.map(l => [l.lens_id, l.lens_name]));
-  const seriesMap = Object.fromEntries(seriesList.map(s => [s.series_id, s.series_name]));
-  const visibleMap = Object.fromEntries(visibilityList.map(v => [v.image_id, v]));
-  const exifMap   = Object.fromEntries(exifList.map(e => [e.image_id, e]));
+  // Create quick-lookup maps
+  const cameraMap = createIdMap(cameraList, 'camera_id', 'camera_name');
+  const lensMap = createIdMap(lensList, 'lens_id', 'lens_name');
+  const seriesMap = createIdMap(seriesList, 'series_id', 'series_name');
+  const visibilityMap = createIdMap(visibilityList, 'image_id');
+  const exifMap = createIdMap(exifList, 'image_id');
 
-  // Base filter
   let filtered = imageId != null
     ? images.filter(img => img.image_id === imageId)
     : images;
 
-  // Filter by series_id if provided
   if (seriesId != null) {
     filtered = filtered.filter(img => img.series_id === seriesId);
   }
 
-  // Filter by homepage visibility if requested
   if (homepageOnly) {
-    filtered = filtered.filter(img => visibleMap[img.image_id]?.is_visible_homepage);
+    filtered = filtered.filter(img => visibilityMap[img.image_id]?.is_visible_homepage);
   }
 
   const result = filtered.map(img => {
     const exif = exifMap[img.image_id] || {};
-    const vis = visibleMap[img.image_id] || {};
+    const vis = visibilityMap[img.image_id] || {};
 
     let focal = null;
     if (exif.focallength != null) {
@@ -84,20 +82,48 @@ export async function fetchImageData({ imageId = null, seriesId = null, homepage
       }
     };
   });
-
+  
   return imageId != null ? (result[0] || null) : result;
 }
 
+/**
+ * @param {string} url
+ * @returns {Promise<Object|Array>}
+ */
+async function fetchJson(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Failed to fetch ${url}`);
+  return await res.json();
+}
+
+/**
+ * Turns an array of objects into a map based on a key.
+ * Optionally supports mapping to a specific value field.
+ * @param {Array} list
+ * @param {string} key - Key to use as map key
+ * @returns {Object}
+ */
+function createIdMap(list, key, valueKey) {
+  if (!Array.isArray(list)) {
+    console.error('createIdMap error: list is not an array', list);
+    return {};
+  }
+
+  return Object.fromEntries(list.map(item => [item[key], item]));
+}
+
+/**
+ * Fetches all series objects from JSON.
+ * @returns {Promise<Array>}
+ */
 export async function fetchSeriesId() {
-  const response = await fetch('json/series.json');
-  if (!response.ok) throw new Error('Failed to fetch series data');
-  return await response.json();
+  return await fetchJson('json/series.json');
 }
 
 /**
  * Determines whether a connection is "slow" by timing a single image load.
- * @param {string} testUrl
- * @returns {Promise<boolean>}
+ * @param {string} testUrl - URL to sample image
+ * @returns {Promise<boolean>} - True if connection is slow
  */
 export async function testConnectionSpeed(testUrl) {
   const start = performance.now();
