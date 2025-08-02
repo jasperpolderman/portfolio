@@ -1,4 +1,4 @@
-import { createLazyImage, onLoadImage } from './domUtils.js';
+import { createLazyImage } from './domUtils.js';
 import { initLightbox } from './lightboxUtils.js';
 
 /**
