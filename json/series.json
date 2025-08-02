@@ -1,5 +1,10 @@
 [
     {
+        "series_id": -999,
+        "series_name": "None",
+        "series_description": "Select this option if you don't want the image to be part of a series."
+    },
+    {
         "series_id": 1,
         "series_name": "Landscape",
         "series_description": "Vast horizons, dramatic skies, and natural beauty captured in quiet moments. This series explores the raw, sweeping essence of nature."
@@ -13,5 +18,10 @@
         "series_id": 3,
         "series_name": "Landmarks",
         "series_description": "Iconic architecture, natural wonders, and monumental structures. This series captures the stories etched into the world's most unforgettable places."
+    },
+    {
+        "series_id": -1,
+        "series_name": "Unseen",
+        "series_description": "Off the map and out of view, far from guidebooks and crowds. This series captures the quiet tones of places often left behind."
     }
 ]

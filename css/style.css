@@ -556,7 +556,7 @@ body {
 .lightbox-exif i {
     display: flex;
     justify-content: center;
-    font-size: 1.0625rem;
+    font-size: 1rem;
 }
 
 .lightbox-exif p {
@@ -810,25 +810,13 @@ body {
 
 .series-card-grid-item {
     display: flex;
+    position: relative;
     max-inline-size: 100%;
     block-size: auto;
-    aspect-ratio: 1 / 1;
     margin-block-end: calc(var(--gap) / 2);
     padding-block-end: var(--aspect-ratio);
     object-fit: cover;
     justify-content: left;
-
-    @media (width > 623px) {
-        aspect-ratio: unset;
-    }
-
-    @media (width > 767px) {
-        aspect-ratio: 1 / 1;
-    }
-
-    @media (width > 931px) {
-        aspect-ratio: unset;
-    }
 
     @media (width > 1163px) {
         margin-block-end: var(--gap);
@@ -873,7 +861,7 @@ body {
     font-weight: 400;
 }
 
-.series-title {
+#series-title {
     font-size: 2.375rem;
     font-weight: 500;
 
@@ -882,14 +870,14 @@ body {
     }
 }
 
-.series-photo-count {
+#series-photo-count {
     margin-block-start: 0.75rem;
     font-size: 1.125rem;
     font-weight: 300;
     color: var(--tertiary-color);
 }
 
-.series-description {
+#series-description {
     margin-block-start: 1.5rem;
     font-size: 1.125rem;
     line-height: 1.5;
