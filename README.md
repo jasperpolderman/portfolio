@@ -1,29 +1,95 @@
-# Jasper's Photography Portfolio 📸
+# Jasper Polderman’s Photography Portfolio 📸
 
-Welcome to my photography portfolio website! This project showcases my journey as an aspiring photographer, capturing stunning moments from around the world.
+Welcome to my photography portfolio! This project is a modern, responsive web showcase for my favorite travel and landscape photos, organized by individual images and thematic series.
 
-## 🌍 About
+---
 
-This site is a responsive, minimalist portfolio designed to:
+## 🌍 About the Project
 
-- Display my photo collection in a dynamic grid layout
-- Organize content into general photos and themed series
+This portfolio is built to be a minimalist, fast, and scalable platform for displaying photography. All content—including photo metadata, EXIF details, and series information—is loaded from JSON files, making it easy to update or expand.
 
-Built with **HTML**, **CSS**, and **JavaScript**, the site dynamically loads photo data from a JSON file, ensuring scalability and ease of updates.
+- **Homepage:** Highlights a curated selection of photos.
+- **Series:** Browse themed collections of images.
+- **Series View:** Dive into a series to explore all its photos, complete with image metadata and EXIF details.
+
+---
 
 ## 🖼 Features
 
-- Responsive design (mobile-first and desktop-optimized)
-- Lazy-loaded images for faster performance
-- Auto-highlighted navigation based on current page
-- Sticky sidebar with a scrolling content section
-- Gradient overlay for small-screen aesthetics
-- Modular and accessible layout with semantic HTML
+- **Responsive Design:** Seamlessly adapts from mobile to desktop.
+- **Dynamic Grids:** JavaScript builds photo grids and series cards from JSON data.
+- **Lazy Loading:** Images are loaded as you scroll for faster performance.
+- **Lightbox Viewer:** Click any image to view it in a fullscreen modal with navigation and detailed metadata.
+- **EXIF Display:** Camera, lens, settings, and location info for each image.
+- **Sticky Sidebar:** Profile, navigation, and copyright info remain accessible.
+- **Modern JS Modules:** Modular code structure for maintainability.
+- **Accessible HTML:** Semantic markup and ARIA labels for better accessibility.
 
-## 🧩 Tech Stack
+---
+
+## 🧑‍💻 Tech Stack
 
 - HTML5
-- CSS3 with media queries
-- Vanilla JavaScript
-- [`imagesLoaded`](https://imagesloaded.desandro.com/) library for smoother loading
-- JSON for image data
+- CSS3 (custom properties, media queries, modern layout)
+- Vanilla JavaScript (ES Modules)
+- JSON for all photo, EXIF, and series data
+
+---
+
+## 🚀 Project Structure
+
+```
+/
+├── assets/
+│   ├── fonts/
+│   ├── icons/
+│   └── lightbox.html
+├── css/
+│   └── style.css
+├── images/
+│   ├── fullsize/
+│   └── placeholders/
+├── javascript/
+│   ├── main.js
+│   ├── pages/
+│   └── utils/
+├── json/
+│   └── *.json
+├── index.html
+├── series.html
+├── series-view.html
+└── README.md
+```
+
+---
+
+## 📦 How It Works
+
+- All image and series data is stored in `/json/`.
+- The JavaScript reads these files and dynamically renders the homepage, series listing, and series view.
+- Clicking an image opens a lightbox modal with navigation and EXIF info.
+
+---
+
+## ✍️ Customization
+
+To add or update photos:
+
+1. Add your full-size image and placeholder thumbnail to `/images/fullsize/` and `/images/placeholders/`.
+2. Update `images.json` with the new photo’s metadata.
+3. Update `exif.json`, `camera.json`, or `lens.json` as needed.
+4. To add to a series, assign a `series_id` matching one in `series.json`.
+
+---
+
+## 📝 Credits
+
+Created and maintained by **Jasper Polderman**.  
+All photos © Jasper Polderman, 2024–present.
+
+---
+
+## 📣 License
+
+This portfolio is for personal, non-commercial use.  
+All images are copyright and may not be used without permission.
