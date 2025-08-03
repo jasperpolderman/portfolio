@@ -23,7 +23,7 @@ export async function setupSeriesViewPage(seriesList) {
   const params = new URLSearchParams(window.location.search);
   const seriesId = Number(params.get('series_id')) || 0;
   const currentSeries = seriesList.find(s => s.series_id === seriesId);
-  const images = await getImageData({ seriesId });
+  const images = await getImageData({ seriesId: seriesId });
   const seriesName = currentSeries?.series_name || '';
   const seriesDesc = currentSeries?.series_description || '';
 
