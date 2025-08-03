@@ -85,7 +85,7 @@ To add or update photos:
 ## 📝 Credits
 
 Created and maintained by **Jasper Polderman**.  
-All photos © Jasper Polderman, 2024–present.
+© 2024-present Jasper Polderman. All rights reserved.
 
 ---
 
