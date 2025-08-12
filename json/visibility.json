@@ -138,5 +138,13 @@
   {
     "image_id": 35,
     "is_visible_homepage": true
+  },
+  {
+    "image_id": 36,
+    "is_visible_homepage": false
+  },
+  {
+    "image_id": 37,
+    "is_visible_homepage": true
   }
 ]

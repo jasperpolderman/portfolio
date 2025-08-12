@@ -313,5 +313,23 @@
     "aperture": 8,
     "shutter": "1/125",
     "iso": 400
+  },
+  {
+    "image_id": 36,
+    "camera_id": 1,
+    "lens_id": 2,
+    "focallength": 13,
+    "aperture": 7.1,
+    "shutter": "1/200",
+    "iso": 100
+  },
+  {
+    "image_id": 37,
+    "camera_id": 1,
+    "lens_id": 2,
+    "focallength": 14,
+    "aperture": 7.1,
+    "shutter": "1/1000",
+    "iso": 100
   }
 ]
