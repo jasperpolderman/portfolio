@@ -40,14 +40,6 @@ export async function setupSeriesListPage(seriesList, parentSelector) {
     container.appendChild(card);
     card.append(info, grid);
 
-    // Observe grid size for dynamic sizing
-    const observer = new ResizeObserver(entries => {
-      for (const entry of entries) {
-        entry.target.style.setProperty('--series-card-width', `${entry.contentRect.width}px`);
-      }
-    });
-    observer.observe(grid);
-
     // Queue image loading task
     const gridSelector = grid.className.split(' ').map(cls => `.${cls}`).join('');
     const placeholderClass = 'series-card-grid-item';

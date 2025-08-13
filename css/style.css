@@ -787,27 +787,28 @@ body {
 .series-card-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    block-size: calc((var(--series-card-width ) / 3) - 0.25rem);
+    block-size: 100%;
+    aspect-ratio: 3 / 1;
     gap: calc(var(--gap) / 2);
 
     @media (width > 623px) {
         display: unset;
         grid-template-columns: unset;
         column-count: 2;
-        block-size: 100%;
+        aspect-ratio: unset;
     }
 
     @media (width > 767px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        block-size: calc((var(--series-card-width) / 3) - 0.25rem);
+        aspect-ratio: 3 / 1;
     }
 
     @media (width > 931px) {
         display: unset;
         grid-template-columns: unset;
         column-count: 2;
-        block-size: 100%;
+        aspect-ratio: unset;
     }
 
     @media (width > 1163px) {
