@@ -331,5 +331,14 @@
     "aperture": 7.1,
     "shutter": "1/1000",
     "iso": 100
+  },
+  {
+    "image_id": 38,
+    "camera_id": 1,
+    "lens_id": 2,
+    "focallength": 10,
+    "aperture": 16,
+    "shutter": "1/13",
+    "iso": 100
   }
 ]
