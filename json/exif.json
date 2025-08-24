@@ -337,8 +337,8 @@
     "camera_id": 1,
     "lens_id": 2,
     "focallength": 10,
-    "aperture": 16,
-    "shutter": "1/13",
+    "aperture": 11,
+    "shutter": "1/20",
     "iso": 100
   }
 ]
