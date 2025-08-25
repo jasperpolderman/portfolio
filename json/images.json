@@ -492,5 +492,18 @@
     "thumbnail": "images/placeholders/netherlands-3-small.jpg",
     "width": 1600,
     "height": 2000
+  },
+  {
+    "image_id": 39,
+    "title": "Steel Reverie",
+    "alt": "'s-Hertogenbosch, The Netherlands",
+    "location": "'s-Hertogenbosch, The Netherlands",
+    "date": "25/08/2025",
+    "series_id": 1,
+    "format_id": 1,
+    "src": "images/fullsize/netherlands-4.jpg",
+    "thumbnail": "images/placeholders/netherlands-4-small.jpg",
+    "width": 2000,
+    "height": 844
   }
 ]

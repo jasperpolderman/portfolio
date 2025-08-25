@@ -340,5 +340,14 @@
     "aperture": 11,
     "shutter": "1/20",
     "iso": 100
+  },
+  {
+    "image_id": 39,
+    "camera_id": 1,
+    "lens_id": 2,
+    "focallength": 10,
+    "aperture": 11,
+    "shutter": "1/50",
+    "iso": 100
   }
 ]
