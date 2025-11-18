@@ -505,5 +505,31 @@
     "thumbnail": "images/placeholders/netherlands-4-small.jpg",
     "width": 2000,
     "height": 844
+  },
+  {
+    "image_id": 40,
+    "title": "Through the Quiet Streets",
+    "alt": "'Lisbon, Portugal",
+    "location": "Lisbon, Portugal",
+    "date": "16/11/2025",
+    "series_id": 3,
+    "format_id": 1,
+    "src": "images/fullsize/lisbon-1.jpg",
+    "thumbnail": "images/placeholders/lisbon-1-small.jpg",
+    "width": 2000,
+    "height": 1125
+  },
+  {
+    "image_id": 41,
+    "title": "Where the Tracks Curve",
+    "alt": "'Lisbon, Portugal",
+    "location": "Lisbon, Portugal",
+    "date": "16/11/2025",
+    "series_id": 3,
+    "format_id": 1,
+    "src": "images/fullsize/lisbon-2.jpg",
+    "thumbnail": "images/placeholders/lisbon-2-small.jpg",
+    "width": 1600,
+    "height": 2000
   }
 ]

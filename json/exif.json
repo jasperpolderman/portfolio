@@ -350,4 +350,23 @@
     "shutter": "1/50",
     "iso": 100
   }
+  ,
+  {
+    "image_id": 40,
+    "camera_id": 1,
+    "lens_id": 2,
+    "focallength": 16,
+    "aperture": 7.1,
+    "shutter": "1/125",
+    "iso": 400
+  },
+  {
+    "image_id": 41,
+    "camera_id": 1,
+    "lens_id": 2,
+    "focallength": 18,
+    "aperture": 7.1,
+    "shutter": "1/500",
+    "iso": 100
+  }
 ]

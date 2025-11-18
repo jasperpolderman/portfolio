@@ -155,4 +155,14 @@
     "image_id": 39,
     "is_visible_homepage": true
   }
+  ,
+  {
+    "image_id": 40,
+    "is_visible_homepage": true
+  }
+  ,
+  {
+    "image_id": 41,
+    "is_visible_homepage": false
+  }
 ]
